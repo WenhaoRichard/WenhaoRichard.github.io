@@ -15,13 +15,13 @@ Education
 ======
 <dl>
 <dt>
-  <img src="../images/ufl.png" width="90" height="90" alt="cuhk" align="left">
+  <img src="../images/ufl.png" width="140" height="110" alt="ufl" align="left">
 </dt>
-<dt> University of Florida</dt>
-<dd>&nbsp; August 2019 - July 2021</dd>
-<dd>&nbsp; GPA 3.50/4.0</dd>
-<dd>&nbsp; MS, Electrical and Computer Engineering (Major)</dd>
-<dd>&nbsp; MS, Computer Science (Minor)</dd>
+<dt>  University of Florida</dt>
+<dd>&nbsp;  August 2019 - July 2021</dd>
+<dd>&nbsp;  GPA 3.50/4.0</dd>
+<dd>&nbsp;  MS, Electrical and Computer Engineering (Major)</dd>
+<dd>&nbsp;  MS, Computer Science (Minor)</dd>
 </dl>
 
 Getting started
