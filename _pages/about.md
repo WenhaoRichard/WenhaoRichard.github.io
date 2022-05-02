@@ -96,6 +96,7 @@ Communication & Control
 </dt>
 <dt>  Double Layer Network Communication Based On Modbus Protocol</dt>
 <dd>&nbsp;  Adopt double layer control protocol(Modebus/TCP & Modbus/RTU) to control the motor and large number of lights and fans.</dd>
+<dd>&nbsp; <a href="http://www.cnki.com.cn/Article/CJFDTotal-DGJY201816010.htm">[Paper]</a>&nbsp;<a href="https://github.com/huxiao1/modbus.git">[Code]</a></dd>
 </dl>
 
 AI
@@ -106,6 +107,7 @@ AI
 </dt>
 <dt>  Deep Learning Model Compression</dt>
 <dd>&nbsp;  Apply quantify method to compress the AlexNet model and prune method to compress the Yolo V3 model so that the models after compression can apply on the embedded platform.</dd>
+<dd>&nbsp; <a href="https://iopscience.iop.org/article/10.1088/1742-6596/2078/1/012047/meta">[Paper]</a>&nbsp;<a href="https://github.com/huxiao1/ai.git">[Code]</a></dd>
 </dl>
 
 Security
@@ -116,4 +118,5 @@ Security
 </dt>
 <dt>  Robots Systems Security</dt>
 <dd>&nbsp;  Develop agent programs on Vxworks, QNX, SylixOS and Linux robot systems to get the vulnerabilities and system informations.</dd>
+<dd>[Not Open Sourced]</dd>
 </dl>
