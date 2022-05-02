@@ -41,6 +41,15 @@ Education
 
 <br/>
 
+Files
+======
+<dl>
+  <dd><a href="./files/Xiaohu_CV.pdf">CV</a></dd>
+  <dd><a href="./files/transcript_graduate.pdf">Transcript(Graduate)</a></dd>
+  <dd><a href="./files/transcript_undergraduate.pdf">Transcript(Undergraduate)</a></dd>
+</dl>
+
+
 Experience
 ======
 <dl>
