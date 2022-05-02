@@ -65,7 +65,7 @@ Experience
 
 <dl>
 <dt>
-  <img src="../images/ICT.jpg" width="100" height="110" alt="ISCAS" align="left">
+  <img src="../images/ICT.jpg" width="100" height="110" alt="ICT" align="left">
 </dt>
 <dt>  Institute of Computing, Chinese Academy of Sciences</dt>
 <dd>&nbsp;  12/2020 - 03/2021</dd>
@@ -85,8 +85,17 @@ Experience
 
 <br/>
 
-Publication
+Research Projects
 ======
+<br/>
+
 PLC Control
 ------
-...
+<dl>
+<dt>
+  <img src="../images/modbus.png" width="100" height="110" alt="modbus" align="left">
+</dt>
+<dt>  Double Layer Network Communication Based On Modbus Protocol</dt>
+<dd>&nbsp;  Adopt double layer control protocol(Modebus/TCP & Modbus/RTU) to control the motor and large number of lights and fans.</dd>
+</dl>
+
