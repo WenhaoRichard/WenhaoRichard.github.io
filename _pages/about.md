@@ -8,7 +8,15 @@ redirect_from:
   - /about.html
 ---
 
-I received the M.Sc. degree in Electrical and Computer Engineering(major) and Computer Science(Minor) from University of Florida, United States, in 2021, respectively. My research interests include Embedded Systems, Robot, Operating Systems, AIoT, Security and Networking.
+I received the M.Sc. degree in Electrical and Computer Engineering(major) and Computer Science(Minor) from University of Florida, United States, in 2021, respectively. My research interests include Embedded Systems, Robot(Control/Application), Operating Systems, AIoT, Security and Networking.
+
+
+News
+======
+<ul>
+  <li>[2022/10] Currently, I am looking for a Research Assistant position in 2022 and a PhD position in 2023</li>
+  <li></li>
+</ul>
 
 
 Education
