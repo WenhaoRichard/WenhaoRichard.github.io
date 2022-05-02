@@ -89,7 +89,7 @@ Research Projects
 ======
 <br/>
 
-PLC Control
+Communication & Control
 ------
 <dl>
 <dt>
@@ -99,3 +99,22 @@ PLC Control
 <dd>&nbsp;  Adopt double layer control protocol(Modebus/TCP & Modbus/RTU) to control the motor and large number of lights and fans.</dd>
 </dl>
 
+AI
+------
+<dl>
+<dt>
+  <img src="../images/compression.png" width="100" height="110" alt="compression" align="left">
+</dt>
+<dt>  Deep Learning Model Compression</dt>
+<dd>&nbsp;  Apply quantify method to compress the AlexNet model and prune method to compress the Yolo V3 model so that the models after compression can apply on the embedded platform.</dd>
+</dl>
+
+Security
+------
+<dl>
+<dt>
+  <img src="../images/security.jpg" width="100" height="110" alt="security" align="left">
+</dt>
+<dt>  Robots Systems Security</dt>
+<dd>&nbsp;  Develop agent programs on Vxworks, QNX, SylixOS and Linux robot systems to get the vulnerabilities and system informations.</dd>
+</dl>
