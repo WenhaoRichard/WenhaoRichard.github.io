@@ -24,6 +24,16 @@ Education
 <dd>&nbsp;  MS, Computer Science (Minor)</dd>
 </dl>
 
+<dl>
+<dt>
+  <img src="../images/ecjtu.png" width="140" height="110" alt="ecjtu" align="left">
+</dt>
+<dt>  East China Jiaotong University</dt>
+<dd>&nbsp;  August 2015 - July 2019</dd>
+<dd>&nbsp;  GPA 3.59/4.0</dd>
+<dd>&nbsp;  BE, Software Engineering + Track Traffic Signal and Control (Double Majors)</dd>
+</dl>
+
 Getting started
 ======
 1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
