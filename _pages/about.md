@@ -87,7 +87,6 @@ Experience
 
 Research Projects
 ======
-<HR align=center width=300 color=#987cb9 SIZE=1>
 
 Communication & Control
 ------
