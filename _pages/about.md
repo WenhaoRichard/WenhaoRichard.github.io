@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: "About me"
-excerpt: "About me"
+excerpt: ""
 author_profile: true
 redirect_from: 
   - /about/
@@ -45,7 +45,7 @@ Experience
 ======
 <dl>
 <dt>
-  <img src="../images/CASIA.png" width="100" height="110" alt="CASIA" align="left">
+  <img src="../images/CASIA.jpg" width="100" height="110" alt="CASIA" align="left">
 </dt>
 <dt>  Institute of Automation, Chinese Academy of Sciences</dt>
 <dd>&nbsp;  02/2022 - 05/2022</dd>
