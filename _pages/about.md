@@ -50,6 +50,7 @@ Experience
 <dt>  Institute of Automation, Chinese Academy of Sciences</dt>
 <dd>&nbsp;  02/2022 - 05/2022</dd>
 <dd>&nbsp;  Research Assistant(Part Time)</dd>
+<dd>&nbsp;  Focus: Autonomous driving robot.</dd>
 </dl>
 
 <dl>
@@ -59,6 +60,27 @@ Experience
 <dt>  Institute of Software, Chinese Academy of Sciences</dt>
 <dd>&nbsp;  05/2021 - 05/2022</dd>
 <dd>&nbsp;  Research Assistant(Full Time)</dd>
+<dd>&nbsp;  Focus: Robot systems security and PLC communication security.</dd>
+</dl>
+
+<dl>
+<dt>
+  <img src="../images/ICT.jpg" width="100" height="110" alt="ISCAS" align="left">
+</dt>
+<dt>  Institute of Computing, Chinese Academy of Sciences</dt>
+<dd>&nbsp;  12/2020 - 03/2021</dd>
+<dd>&nbsp;  Research Assistant(Part Time)</dd>
+<dd>&nbsp;  Focus: Deep learning model compression.</dd>
+</dl>
+
+<dl>
+<dt>
+  <img src="../images/CASIA.jpg" width="100" height="110" alt="CASIA" align="left">
+</dt>
+<dt>  Institute of Automation, Chinese Academy of Sciences</dt>
+<dd>&nbsp;  02/2018 - 04/2018</dd>
+<dd>&nbsp;  Research Assistant(Full Time)</dd>
+<dd>&nbsp;  Focus: PLC communication&control.</dd>
 </dl>
 
 <br/>
