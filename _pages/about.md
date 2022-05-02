@@ -31,7 +31,7 @@ Education
 <dd>&nbsp;  BE, Software Engineering + Track Traffic Signal and Control (Double Majors)</dd>
 </dl>
 
-
+<br/>
 Getting started
 ======
 1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
