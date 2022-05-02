@@ -15,22 +15,20 @@ Education
 ======
 <dl>
 <dt>
-  <img src="../images/ufl.png" width="140" height="110" alt="ufl" align="left">
+  <img src="../images/ufl.png" width="100" height="110" alt="ufl" align="left">
 </dt>
 <dt>  University of Florida</dt>
 <dd>&nbsp;  August 2019 - July 2021</dd>
-<dd>&nbsp;  GPA 3.50/4.0</dd>
 <dd>&nbsp;  MS, Electrical and Computer Engineering (Major)</dd>
 <dd>&nbsp;  MS, Computer Science (Minor)</dd>
 </dl>
 
 <dl>
 <dt>
-  <img src="../images/ecjtu.jpg" width="140" height="110" alt="ecjtu" align="left">
+  <img src="../images/ecjtu.jpg" width="100" height="110" alt="ecjtu" align="left">
 </dt>
 <dt>  East China Jiaotong University</dt>
 <dd>&nbsp;  August 2015 - July 2019</dd>
-<dd>&nbsp;  GPA 3.59/4.0</dd>
 <dd>&nbsp;  BE, Software Engineering + Track Traffic Signal and Control (Double Majors)</dd>
 </dl>
 
