@@ -15,7 +15,7 @@ News
 ======
 <ul>
   <li>[2022/10] Currently, I am looking for a Research Assistant position in 2022 and a PhD position in 2023</li>
-  <li></li>
+  <li>...</li>
 </ul>
 
 
