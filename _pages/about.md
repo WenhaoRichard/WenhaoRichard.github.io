@@ -41,6 +41,27 @@ Education
 
 <br/>
 
+Experience
+======
+<dl>
+<dt>
+  <img src="../images/CASIA.png" width="100" height="110" alt="CASIA" align="left">
+</dt>
+<dt>  Institute of Automation, Chinese Academy of Sciences</dt>
+<dd>&nbsp;  02/2022 - 05/2022</dd>
+<dd>&nbsp;  Research Assistant(Part Time)</dd>
+</dl>
+
+<dl>
+<dt>
+  <img src="../images/ISCAS.jpg" width="100" height="110" alt="ISCAS" align="left">
+</dt>
+<dt>  Institute of Software, Chinese Academy of Sciences</dt>
+<dd>&nbsp;  05/2021 - 05/2022</dd>
+<dd>&nbsp;  Research Assistant(Full Time)</dd>
+</dl>
+
+
 Getting started
 ======
 1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
