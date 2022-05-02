@@ -96,7 +96,7 @@ Communication & Control
 </dt>
 <dt>  Double Layer Network Communication Based On Modbus Protocol</dt>
 <dd>&nbsp;  Adopt double layer control protocol(Modebus/TCP & Modbus/RTU) to control the motor and large number of lights and fans.</dd>
-<dd> <a href="http://www.cnki.com.cn/Article/CJFDTotal-DGJY201816010.htm">[Paper]</a>&nbsp;<a href="https://github.com/huxiao1/modbus.git">[Code]</a></dd>
+<dd><a href="http://www.cnki.com.cn/Article/CJFDTotal-DGJY201816010.htm">[Paper]</a>&nbsp;<a href="https://github.com/huxiao1/modbus.git">[Code]</a></dd>
 </dl>
 
 AI
