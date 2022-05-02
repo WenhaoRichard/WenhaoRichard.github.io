@@ -14,14 +14,15 @@ I received the M.Sc. degree in Electrical and Computer Engineering(major) and Co
 Education
 ======
 <dl>
+<dt>
   <img src="../images/profile.png" width="90" height="90" alt="cuhk" align="left">
-</dl>
+</dt>
 <dt> University of Florida</dt>
 <dd>&nbsp; August 2019 - July 2021</dd>
 <dd>&nbsp; GPA 3.50/4.0</dd>
 <dd>&nbsp; MS, Electrical and Computer Engineering (Major)</dd>
 <dd>&nbsp; MS, Computer Science (Minor)</dd>
-
+</dl>
 
 Getting started
 ======
