@@ -26,7 +26,6 @@ Education
 <dt>
   <img src="../images/ecjtu.jpg" width="100" height="110" alt="ecjtu" align="left">
 </dt>
-<br/>
 <dt>  East China Jiaotong University</dt>
 <dd>&nbsp;  August 2015 - July 2019</dd>
 <dd>&nbsp;  BE, Software Engineering + Track Traffic Signal and Control (Double Majors)</dd>

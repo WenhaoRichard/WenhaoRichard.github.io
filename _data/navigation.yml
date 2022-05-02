@@ -2,9 +2,7 @@
 main:
   - title: "Publications"
     url: /publications/
-
-  - title: "Email"
-    url: mailto:taiwang.me@gmail.com   
+ 
 
   #- title: "Teaching"
     #url: /teaching/    
