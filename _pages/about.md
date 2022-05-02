@@ -9,7 +9,11 @@ redirect_from:
 ---
 
 I received the M.Sc. degree in Electrical and Computer Engineering(major) and Computer Science(Minor) from University of Florida, United States, in 2021, respectively. My research interests include Embedded Systems, Robot(Control/Application), Operating Systems, AIoT, Security and Networking.
-
+<dl>
+  <dd><a href="./files/Xiaohu_CV.pdf">CV</a></dd>
+  <dd><a href="./files/transcript_graduate.pdf">Transcript(Graduate)</a></dd>
+  <dd><a href="./files/transcript_undergraduate.pdf">Transcript(Undergraduate)</a></dd>
+</dl>
 
 News
 ======
@@ -40,14 +44,6 @@ Education
 </dl>
 
 <br/>
-
-Files
-======
-<dl>
-  <dd><a href="./files/Xiaohu_CV.pdf">CV</a></dd>
-  <dd><a href="./files/transcript_graduate.pdf">Transcript(Graduate)</a></dd>
-  <dd><a href="./files/transcript_undergraduate.pdf">Transcript(Undergraduate)</a></dd>
-</dl>
 
 
 Experience
