@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I received the M.Sc. degree in Electrical and Computer Engineering(major) and Computer Science(Minor) from University of Florida, United States, in 2021, respectively. Currently, I am a research assistant at Institute of Software, Chinese Academy of Sciences.
+I received the M.Sc. degree in Electrical and Computer Engineering(major) and Computer Science(Minor) from University of Florida, United States, in 2021, respectively. My research interests include Embedded Systems, Robot, Operating Systems, AIoT, Security and Networking.
 
 
 Education
