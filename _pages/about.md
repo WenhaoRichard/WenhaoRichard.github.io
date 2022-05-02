@@ -15,7 +15,7 @@ Education
 ======
 <dl>
 <dt>
-  <img src="../images/profile.png" width="90" height="90" alt="cuhk" align="left">
+  <img src="../images/ufl.png" width="90" height="90" alt="cuhk" align="left">
 </dt>
 <dt> University of Florida</dt>
 <dd>&nbsp; August 2019 - July 2021</dd>
