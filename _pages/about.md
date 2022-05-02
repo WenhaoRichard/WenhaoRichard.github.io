@@ -19,8 +19,7 @@ Education
 </dt>
 <dt>  University of Florida</dt>
 <dd>&nbsp;  August 2019 - July 2021</dd>
-<dd>&nbsp;  MS, Electrical and Computer Engineering (Major)</dd>
-<dd>&nbsp;  MS, Computer Science (Minor)</dd>
+<dd>&nbsp;  MS, Electrical and Computer Engineering (Major), Computer Science (Minor)</dd>
 </dl>
 
 <dl>
@@ -31,6 +30,7 @@ Education
 <dd>&nbsp;  August 2015 - July 2019</dd>
 <dd>&nbsp;  BE, Software Engineering + Track Traffic Signal and Control (Double Majors)</dd>
 </dl>
+
 
 Getting started
 ======
