@@ -107,7 +107,7 @@ AI
 </dt>
 <dt>  Deep Learning Model Compression</dt>
 <dd>&nbsp;  Apply quantify method to compress the AlexNet model and prune method to compress the Yolo V3 model so that the models after compression can apply on the embedded platform.</dd>
-<dd>&nbsp; <a href="https://iopscience.iop.org/article/10.1088/1742-6596/2078/1/012047/meta">[Paper]</a>&nbsp;<a href="https://github.com/huxiao1/ai.git">[Code]</a></dd>
+<dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://iopscience.iop.org/article/10.1088/1742-6596/2078/1/012047/meta">[Paper]</a>&nbsp;<a href="https://github.com/huxiao1/ai.git">[Code]</a></dd>
 </dl>
 
 Security
