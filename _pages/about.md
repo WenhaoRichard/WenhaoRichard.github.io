@@ -18,7 +18,7 @@ I received the M.Sc. degree in Electrical and Computer Engineering(major) and Co
 News
 ======
 <ul>
-  <li>[2022/10] Currently, I am looking for a Research Assistant position in 2022 and a PhD position in 2023</li>
+  <li>[2022/10] Currently, I am looking for a PhD position in 2023</li>
   <li>...</li>
 </ul>
 
