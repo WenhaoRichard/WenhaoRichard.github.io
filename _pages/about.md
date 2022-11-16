@@ -8,9 +8,9 @@ redirect_from:
   - /about.html
 ---
 
-I received the M.Sc. degree in Electrical and Computer Engineering(major) and Computer Science(Minor) from University of Florida, United States, in 2021, respectively. My research interests include Embedded Systems, Robot(Control/Application), Operating Systems, AIoT, Security and Networking.
+I received the M.Sc. degree in Electrical and Computer Engineering(major) and Computer Science(Minor) from University of Florida, United States, in 2021, respectively. My research interests include Security(IoT Security, Software Security, etc.), IoT/Embedded Systems(Control/Application).
 <dl>
-  <dd><a href="./files/Xiaohu_CV.pdf">CV</a></dd>
+  <dd><a href="./files/HuXiao_CV.pdf">CV</a></dd>
   <dd><a href="./files/transcript_graduate.pdf">Transcript(Graduate)</a></dd>
   <dd><a href="./files/transcript_undergraduate.pdf">Transcript(Undergraduate)</a></dd>
 </dl>
@@ -19,6 +19,8 @@ News
 ======
 <ul>
   <li>[2022/10] Currently, I am looking for a PhD position in 2023</li>
+  <li>[2022/07 - Present] Currently, I am a remote research assistant under the supervision of Prof.<a href=https://cs.uwaterloo.ca/~m285xu/>Xu Meng</a>a at the Unversity of Waterloo</li>
+  <li>[2021/06 - 2022/06] I am a research assistant under the supervision of Prof.<a href=https://people.ucas.ac.cn/~jingzheng>Jingzheng wu</a>a at the Institute of Software, Chinese Academy of Sciences</li>
   <li>...</li>
 </ul>
 
