@@ -105,6 +105,7 @@ Experience
 Research Projects
 ======
 System
+------
 <dl>
 <dt>
   <img src="../images/HuOS.png" width="100" height="110" alt="OS" align="left">
