@@ -19,7 +19,7 @@ News
 ======
 <ul>
   <li>[2022/10] Currently, I am looking for a PhD position in 2023</li>
-  <li>[2022/07 - Present] Currently, I am a remote research assistant under the supervision of Prof.<a href="https://cs.uwaterloo.ca/~m285xu/">Xu Meng</a> at the Unversity of Waterloo</li>
+  <li>[2022/07 - 2022/11] I am a remote research assistant under the supervision of Prof.<a href="https://cs.uwaterloo.ca/~m285xu/">Xu Meng</a> at the Unversity of Waterloo</li>
   <li>[2021/06 - 2022/06] I am a research assistant under the supervision of Prof.<a href="https://people.ucas.ac.cn/~jingzheng">Jingzheng Wu</a> at the Institute of Software, Chinese Academy of Sciences</li>
   <li>...</li>
 </ul>
@@ -55,7 +55,7 @@ Experience
   <img src="../images/waterloo.jpg" width="100" height="110" alt="WATERLOO" align="left">
 </dt>
 <dt>   Cheriton School of Computer Science at the University of Waterloo</dt>
-<dd>&nbsp;  07/2022 - Present</dd>
+<dd>&nbsp;  07/2022 - 11/2022</dd>
 <dd>&nbsp;  Research Assistant(Part Time)</dd>
 <dd>&nbsp;  Focus: System Security.</dd>
 </dl>
@@ -104,6 +104,16 @@ Experience
 
 Research Projects
 ======
+System
+------
+<dl>
+<dt>
+  <img src="../images/HuOS.png" width="100" height="110" alt="OS" align="left">
+</dt>
+<dt>  A mixed-mode OS designed by me.</dt>
+<dd>&nbsp;  Onging...</dd>
+<dd><a href="https://github.com/huxiao1/HuOS">[Link]</dd>
+</dl>
 
 Communication & Control
 ------
