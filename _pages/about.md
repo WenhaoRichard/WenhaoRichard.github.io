@@ -111,9 +111,9 @@ System
 <dt>
   <img src="../images/HuOS.png" width="100" height="110" alt="OS" align="left">
 </dt>
-<dt>&nbsp;A mixed-mode OS designed by me.</dt>
-<dd>&nbsp;Onging...</dd>
-<dd>&nbsp;<a href="https://github.com/huxiao1/HuOS">[Link]</a></dd>
+<dt text-align: left>A mixed-mode OS designed by me.</dt>
+<dd text-align: left>Onging...</dd>
+<dd text-align: left><a href="https://github.com/huxiao1/HuOS">[Link]</a></dd>
 </dl>
 
 Communication & Control
