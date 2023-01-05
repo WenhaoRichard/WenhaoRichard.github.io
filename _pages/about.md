@@ -111,7 +111,7 @@ System
 <dt>
   <img src="../images/HuOS.png" width="100" height="110" alt="OS" align="left">
 </dt>
-<dt>  A mixed-mode OS designed by me.</dt>
+<dt>A mixed-mode OS designed by me.</dt>
 <dd>  Onging...</dd>
 <dd>  <a href="https://github.com/huxiao1/HuOS">[Link]</a></dd>
 </dl>
@@ -123,7 +123,7 @@ Communication & Control
   <img src="../images/modbus.png" width="100" height="110" alt="modbus" align="left">
 </dt>
 <dt>  Double Layer Network Communication Based On Modbus Protocol</dt>
-<dd>&nbsp;  Adopt double layer control protocol(Modebus/TCP & Modbus/RTU) to control the motor and large number of   lights and fans.</dd>
+<dd>  Adopt double layer control protocol(Modebus/TCP & Modbus/RTU) to control the motor and large number of   lights and fans.</dd>
 <dd>  <a href="http://www.cnki.com.cn/Article/CJFDTotal-DGJY201816010.htm">[Paper]</a>&nbsp;<a href="https://github.com/huxiao1/modbus.git">[Code]</a></dd>
 </dl>
 
