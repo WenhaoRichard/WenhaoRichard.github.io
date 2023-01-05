@@ -112,8 +112,8 @@ System
   <img src="../images/HuOS.png" width="100" height="110" alt="OS" align="left">
 </dt>
 <dt style="text-align: left; padding-left: 115px;">A mixed-mode OS designed by me.</dt>
-<dd style="text-align: left; padding-left: 115px;">Onging...</dd>
-<dd style="text-align: left; padding-left: 115px;"><a href="https://github.com/huxiao1/HuOS">[Link]</a></dd>
+<dd style="text-align: left; padding-left: 101.5px;">Onging...</dd>
+<dd style="text-align: left; padding-left: 101.5px;"><a href="https://github.com/huxiao1/HuOS">[Link]</a></dd>
 </dl>
 
 Communication & Control
@@ -123,8 +123,8 @@ Communication & Control
   <img src="../images/modbus.png" width="100" height="110" alt="modbus" align="left">
 </dt>
 <dt style="text-align: left; padding-left: 115px;">Double Layer Network Communication Based On Modbus Protocol</dt>
-<dd style="text-align: left; padding-left: 115px;">Adopt double layer control protocol(Modebus/TCP & Modbus/RTU) to control the motor and large number of   lights and fans.</dd>
-<dd style="text-align: left; padding-left: 115px;"><a href="http://www.cnki.com.cn/Article/CJFDTotal-DGJY201816010.htm">[Paper]</a>&nbsp;<a href="https://github.com/huxiao1/modbus.git">[Code]</a></dd>
+<dd style="text-align: left; padding-left: 101.5px;">Adopt double layer control protocol(Modebus/TCP & Modbus/RTU) to control the motor and large number of lights and fans.</dd>
+<dd style="text-align: left; padding-left: 101.5px;"><a href="http://www.cnki.com.cn/Article/CJFDTotal-DGJY201816010.htm">[Paper]</a>&nbsp;<a href="https://github.com/huxiao1/modbus.git">[Code]</a></dd>
 </dl>
 
 AI
@@ -134,8 +134,8 @@ AI
   <img src="../images/compression.png" width="100" height="110" alt="compression" align="left">
 </dt>
 <dt style="text-align: left; padding-left: 115px;">Deep Learning Model Compression</dt>
-<dd style="text-align: left; padding-left: 115px;">Apply quantify method to compress the AlexNet model and prune method to compress the Yolo V3 model so   that the models after compression can apply on the embedded platform.</dd>
-<dd style="text-align: left; padding-left: 115px;"><a href="https://iopscience.iop.org/article/10.1088/1742-6596/2078/1/012047/meta">[Paper]</a>&nbsp;<a href="https://github.com/huxiao1/ai.git">[Code]</a></dd>
+<dd style="text-align: left; padding-left: 101.5px;">Apply quantify method to compress the AlexNet model and prune method to compress the Yolo V3 model so that the models after compression can apply on the embedded platform.</dd>
+<dd style="text-align: left; padding-left: 101.5px;"><a href="https://iopscience.iop.org/article/10.1088/1742-6596/2078/1/012047/meta">[Paper]</a>&nbsp;<a href="https://github.com/huxiao1/ai.git">[Code]</a></dd>
 </dl>
 
 Security
@@ -145,7 +145,6 @@ Security
   <img src="../images/security.jpg" width="100" height="110" alt="security" align="left">
 </dt>
 <dt style="text-align: left; padding-left: 115px;">Robots Systems Security</dt>
-<dd style="text-align: left; padding-left: 115px;">Develop agent programs on Vxworks, QNX, SylixOS and Linux robot systems to get the vulnerabilities and   system informations.</dd>
-<dd style="text-align: left; padding-left: 115px;">Develop agent programs on Vxworks, QNX, SylixOS and Linux robot systems to get the vulnerabilities and   system informations.</dd>
-<dd ><a href="#">[Not Open Sourced]</a></dd>
+<dd style="text-align: left; padding-left: 101.5px;">Develop agent programs on Vxworks, QNX, SylixOS and Linux robot systems to get the vulnerabilities and system informations.</dd>
+<dd style="text-align: left; padding-left: 101.5px;"><a href="#">[Not Open Sourced]</a></dd>
 </dl>
