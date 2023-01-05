@@ -54,7 +54,7 @@ Experience
 <dt>
   <img src="../images/waterloo.jpg" width="100" height="110" alt="WATERLOO" align="left">
 </dt>
-<dt>   Cheriton School of Computer Science at the University of Waterloo</dt>
+<dt>  Cheriton School of Computer Science at the University of Waterloo</dt>
 <dd>&nbsp;  07/2022 - 11/2022</dd>
 <dd>&nbsp;  Research Assistant(Part Time)</dd>
 <dd>&nbsp;  Focus: System Security.</dd>
