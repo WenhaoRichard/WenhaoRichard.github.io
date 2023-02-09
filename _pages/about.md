@@ -9,37 +9,42 @@ redirect_from:
 ---
 
 I received the M.Sc. degree in Electrical and Computer Engineering(major) and Computer Science(Minor) from University of Florida, United States, in 2021, respectively. My research interests include Security(IoT Security, Software Security, etc.), IoT/Embedded Systems(Control/Application/Hardware).  
-<dl id = "myList" style="font-family: Arial, sans-serif; font-size: 14px;color: #333; text-align: left; border: 2px solid #3f51b5; padding: 10px; border-radius: 10px;">
+<dl style="font-family: Arial, sans-serif; font-size: 14px;color: #333; text-align: left; border: 2px solid #3f51b5; padding: 10px; border-radius: 10px;">
   <dt>My Documents</dt>
-  <dd style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
+  <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
     <a href="./files/HuXiao_CV.pdf" style="color: black; text-decoration: none;">CV</a>
   </dd>
-  <dd style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
+  <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
     <a href="./files/transcript_graduate.pdf" style="color: black; text-decoration: none;">Transcript (Graduate)</a>
   </dd>
-  <dd style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
+  <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
     <a href="./files/transcript_undergraduate.pdf" style="color: black; text-decoration: none;">Transcript (Undergraduate)</a>
   </dd>
   <dt>My Blogs and Writings</dt>
-  <dd style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
+  <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
     <a href="https://github.com/huxiao1/Blog" style="color: black; text-decoration: none;">My Blog</a>
   </dd>
   <dt>Paper Reading Notes</dt>
-  <dd style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
+  <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
     <a href="https://github.com/huxiao1/Paper" style="color: black; text-decoration: none;">Paper Reading</a>
   </dd>
 </dl>
 
 <script>
-  const links = document.querySelectorAll("#myList a");
-  for (const link of links) {
+  const links = document.querySelectorAll(".link");
+
+  links.forEach(link => {
     link.addEventListener("mouseenter", function() {
+      this.style.color = "red";
       this.style.fontSize = "20px";
+      this.style.transform = "scale(1.01)";
     });
     link.addEventListener("mouseleave", function() {
+      this.style.color = "blue";
       this.style.fontSize = "14px";
+      this.style.transform = "scale(1)";
     });
-  }
+  });
 </script>
 
 News
