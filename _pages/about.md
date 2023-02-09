@@ -8,11 +8,26 @@ redirect_from:
   - /about.html
 ---
 
-I received the M.Sc. degree in Electrical and Computer Engineering(major) and Computer Science(Minor) from University of Florida, United States, in 2021, respectively. My research interests include Security(IoT Security, Software Security, etc.), IoT/Embedded Systems(Control/Application).
-<dl>
-  <dd><a href="./files/HuXiao_CV.pdf">CV</a></dd>
-  <dd><a href="./files/transcript_graduate.pdf">Transcript(Graduate)</a></dd>
-  <dd><a href="./files/transcript_undergraduate.pdf">Transcript(Undergraduate)</a></dd>
+I received the M.Sc. degree in Electrical and Computer Engineering(major) and Computer Science(Minor) from University of Florida, United States, in 2021, respectively. My research interests include Security(IoT Security, Software Security, etc.), IoT/Embedded Systems(Control/Application/Hardware).
+<dl style="border: 1px solid black; padding: 10px;">
+  <dt>My Documents</dt>
+  <dd style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
+    <a href="./files/HuXiao_CV.pdf" style="color: black; text-decoration: none;">CV</a>
+  </dd>
+  <dd style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
+    <a href="./files/transcript_graduate.pdf" style="color: black; text-decoration: none;">Transcript (Graduate)</a>
+  </dd>
+  <dd style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
+    <a href="./files/transcript_undergraduate.pdf" style="color: black; text-decoration: none;">Transcript (Undergraduate)</a>
+  </dd>
+  <dt>My Blogs and Writings</dt>
+  <dd style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
+    <a href="https://github.com/huxiao1/Blog" style="color: black; text-decoration: none;">My Blog</a>
+  </dd>
+  <dt>Paper Reading Notes</dt>
+  <dd style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
+    <a href="https://github.com/huxiao1/Paper" style="color: black; text-decoration: none;">Paper Reading</a>
+  </dd>
 </dl>
 
 News
@@ -111,7 +126,7 @@ System
 <dt>
   <img src="../images/HuOS.png" width="100" height="110" alt="OS" align="left">
 </dt>
-<dt style="text-align: left; padding-left: 115px;">A mixed-mode OS designed by me.</dt>
+<dt style="text-align: left; padding-left: 115px;">A Hybird-Mode Kernel Designed By Me</dt>
 <dd style="text-align: left; padding-left: 101.5px;">Onging...</dd>
 <dd style="text-align: left; padding-left: 101.5px;"><a href="https://github.com/huxiao1/HuOS">[Link]</a></dd>
 </dl>
