@@ -8,8 +8,8 @@ redirect_from:
   - /about.html
 ---
 
-I received the M.Sc. degree in Electrical and Computer Engineering(major) and Computer Science(Minor) from University of Florida, United States, in 2021, respectively. My research interests include Security(IoT Security, Software Security, etc.), IoT/Embedded Systems(Control/Application/Hardware).
-<dl style="border: 2px solid #3f51b5; padding: 10px; border-radius: 10px;">
+I received the M.Sc. degree in Electrical and Computer Engineering(major) and Computer Science(Minor) from University of Florida, United States, in 2021, respectively. My research interests include Security(IoT Security, Software Security, etc.), IoT/Embedded Systems(Control/Application/Hardware).  
+<dl id = "myList" style="font-family: Arial, sans-serif; font-size: 14px;color: #333; text-align: left; border: 2px solid #3f51b5; padding: 10px; border-radius: 10px;">
   <dt>My Documents</dt>
   <dd style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
     <a href="./files/HuXiao_CV.pdf" style="color: black; text-decoration: none;">CV</a>
@@ -29,6 +29,18 @@ I received the M.Sc. degree in Electrical and Computer Engineering(major) and Co
     <a href="https://github.com/huxiao1/Paper" style="color: black; text-decoration: none;">Paper Reading</a>
   </dd>
 </dl>
+
+<script>
+  const links = document.querySelectorAll("#myList a");
+  for (const link of links) {
+    link.addEventListener("mouseenter", function() {
+      this.style.fontSize = "20px";
+    });
+    link.addEventListener("mouseleave", function() {
+      this.style.fontSize = "14px";
+    });
+  }
+</script>
 
 News
 ======
