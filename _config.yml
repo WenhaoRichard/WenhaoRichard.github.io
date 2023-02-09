@@ -237,7 +237,7 @@ defaults:
       comment: true
   # _talks
   - scope:
-      path: ""
+      path: "https://github.com/huxiao1/PACMem"
       type: talks
     values:
       layout: talk
