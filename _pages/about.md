@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 I received the M.Sc. degree in Electrical and Computer Engineering(major) and Computer Science(Minor) from University of Florida, United States, in 2021, respectively. My research interests include Security(IoT Security, Software Security, etc.), IoT/Embedded Systems(Control/Application/Hardware).
-<dl style="border: 1px solid black; padding: 10px;">
+<dl style="border: 2px solid #3f51b5; padding: 10px; border-radius: 10px;">
   <dt>My Documents</dt>
   <dd style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
     <a href="./files/HuXiao_CV.pdf" style="color: black; text-decoration: none;">CV</a>
