@@ -28,6 +28,10 @@ I received the M.Sc. degree in Electrical and Computer Engineering(major) and Co
   <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
     <a href="https://github.com/huxiao1/Paper" style="color: black; text-decoration: none;">Paper Reading</a>
   </dd>
+  <dt>Tools</dt>
+  <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
+    <a href="../time_diff.html" style="color: black; text-decoration: none;">Time Difference Between China and US</a>
+  </dd>
 </dl>
 
 <script>

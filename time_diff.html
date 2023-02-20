@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>中美时差转换</title>
+	<style>
+		.container {
+			margin: 0 auto;
+			width: 400px;
+			text-align: center;
+		}
+
+		h1 {
+			font-size: 32px;
+		}
+
+		label {
+			display: inline-block;
+			width: 100px;
+		}
+
+		input[type="text"] {
+			padding: 8px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+		}
+
+		button {
+			padding: 8px;
+			background-color: #2196F3;
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+
+		#result {
+			margin-top: 20px;
+			font-size: 24px;
+		}
+
+		#result2 {
+			margin-top: 20px;
+			font-size: 24px;
+		}
+
+		#result3 {
+			margin-top: 20px;
+			font-size: 24px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>中美时差转换</h1>
+		<p>正确的时间格式，如：2023-02-21 08:30:00</p>
+		<label for="beijing-time">北京时间：</label>
+		<input type="text" id="beijing-time">
+		<button id="convert-btn">转换</button>
+		<div id="result2"></div>
+		<div id="result3"></div>
+		<div id="result"></div>
+	</div>
+	<script>
+		const convertBtn = document.getElementById('convert-btn');
+		const beijingTimeInput = document.getElementById('beijing-time');
+		const resultDiv = document.getElementById('result')
+		const resultDiv2 = document.getElementById('result2');
+		const resultDiv3 = document.getElementById('result3');
+
+		convertBtn.addEventListener('click', () => {
+			const beijingTime = beijingTimeInput.value;
+			const beijingDate = new Date(beijingTime);
+			if (isNaN(beijingDate.getTime())) {
+				resultDiv.innerHTML = '请输入正确的时间格式，如：2023-02-20 12:00:00';
+				resultDiv2.innerHTML = '请输入正确的时间格式，如：2023-02-20 12:00:00';
+				resultDiv3.innerHTML = '请输入正确的时间格式，如：2023-02-20 12:00:00';
+			} else {
+				//const usTime = new Date(beijingDate.getTime() - 780 * 60 * 1000);
+				const usTime = new Date(beijingDate.getTime());
+				const usTimeStr = usTime.toLocaleString('en-US', { timeZone: 'America/New_York'});
+				resultDiv.innerHTML = `美东时间：${usTimeStr}`;
+
+				const usTime2 = new Date(beijingDate.getTime());
+				const usTimeStr2 = usTime2.toLocaleString('en-US', { timeZone: 'America/Los_Angeles'});
+				resultDiv2.innerHTML = `美西时间：${usTimeStr2}`;
+
+				const usTime3 = new Date(beijingDate.getTime());
+				const usTimeStr3 = usTime3.toLocaleString('en-US', { timeZone: 'America/Chicago'});
+				resultDiv3.innerHTML = `美中时间：${usTimeStr3}`;
+			}
+		});
+	</script>
+</body>
+</html>
