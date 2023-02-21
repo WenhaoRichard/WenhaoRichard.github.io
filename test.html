@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Time Slot</title>
+    <style type="text/css">
+      table {
+        border-collapse: collapse;
+        width: 30%;
+      }
+
+      th, td {
+        text-align: left;
+        padding: 8px;
+        border: 1px solid black;
+      }
+
+      th {
+        background-color: #ddd;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      .colored {
+        background-color: blue;
+      }
+
+      .square {
+        width: 105px;
+        height: 40px;
+        background-color: blue;
+        margin-left: 100px;
+        margin-bottom: 15px;
+      }
+
+      .text1 {
+        margin-left: 5px;
+        margin-bottom: 20px;
+        font-size: 20px;
+        margin-top: 10px;
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <div style="display: flex; align-items: center;">
+      <div style="font-size: 20px; margin-bottom: 20px; margin-left: 250px; margin-top: 10px">China today is</div>
+      <div id="date" class="text1"></div>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <div class = "square"></div>
+      <span style="margin-left: 10px; margin-bottom: 15px;">Free Time</span>
+      <div style="margin-left: 40px; margin-bottom: 15px;">*: The day before the current Chinese date</div>
+    </div>
+    <table>
+      <tr>
+        <th>China</th>
+        <th>US West(- 16 hours)</th>
+        <th>US Mid(- 14 hours)</th>
+        <th>US East(- 13 hours)</th>
+        <th>Hu Xiao</th>
+      </tr>
+      <tr>
+        <td>00:00</td>
+        <td>08:00 *</td>
+        <td>10:00 *</td>
+        <td>11:00 *</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>01:00</td>
+        <td>09:00 *</td>
+        <td>11:00 *</td>
+        <td>12:00 *</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>02:00</td>
+        <td>10:00 *</td>
+        <td>12:00 *</td>
+        <td>13:00 *</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>03:00</td>
+        <td>11:00 *</td>
+        <td>13:00 *</td>
+        <td>14:00 *</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>04:00</td>
+        <td>12:00 *</td>
+        <td>14:00 *</td>
+        <td>15:00 *</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>05:00</td>
+        <td>13:00 *</td>
+        <td>15:00 *</td>
+        <td>16:00 *</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>06:00</td>
+        <td>14:00 *</td>
+        <td>16:00 *</td>
+        <td>17:00 *</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>07:00</td>
+        <td>15:00 *</td>
+        <td>17:00 *</td>
+        <td>18:00 *</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>08:00</td>
+        <td>16:00 *</td>
+        <td>18:00 *</td>
+        <td>19:00 *</td>
+        <td class="colored"></td>
+      </tr>
+      <tr>
+        <td>09:00</td>
+        <td>17:00 *</td>
+        <td>19:00 *</td>
+        <td>20:00 *</td>
+        <td class="colored"></td>
+      </tr>
+      <tr>
+        <td>10:00</td>
+        <td>18:00 *</td>
+        <td>20:00 *</td>
+        <td>21:00 *</td>
+        <td class="colored"></td>
+      </tr>
+      <tr>
+        <td>11:00</td>
+        <td>19:00 *</td>
+        <td>21:00 *</td>
+        <td>22:00 *</td>
+        <td class="colored"></td>
+      </tr>
+      <tr>
+        <td>12:00</td>
+        <td>20:00 *</td>
+        <td>22:00 *</td>
+        <td>23:00 *</td>
+        <td class="colored"></td>
+      </tr>
+      <tr>
+        <td>13:00</td>
+        <td>21:00 *</td>
+        <td>23:00 *</td>
+        <td>00:00</td>
+        <td class="colored"></td>
+      </tr>
+      <tr>
+        <td>14:00</td>
+        <td>22:00 *</td>
+        <td>00:00</td>
+        <td>01:00</td>
+        <td class="colored"></td>
+      </tr>
+      <tr>
+        <td>15:00</td>
+        <td>23:00 *</td>
+        <td>01:00</td>
+        <td>02:00</td>
+        <td class="colored"></td>
+      </tr>
+      <tr>
+        <td>16:00</td>
+        <td>00:00</td>
+        <td>02:00</td>
+        <td>03:00</td>
+        <td class="colored"></td>
+      </tr>
+      <tr>
+        <td>17:00</td>
+        <td>01:00</td>
+        <td>03:00</td>
+        <td>04:00</td>
+        <td class="colored"></td>
+      </tr>
+      <tr>
+        <td>18:00</td>
+        <td>02:00</td>
+        <td>04:00</td>
+        <td>05:00</td>
+        <td class="colored"></td>
+      </tr>
+      <tr>
+        <td>19:00</td>
+        <td>03:00</td>
+        <td>05:00</td>
+        <td>06:00</td>
+        <td class="colored"></td>
+      </tr>
+      <tr>
+        <td>20:00</td>
+        <td>04:00</td>
+        <td>06:00</td>
+        <td>07:00</td>
+        <td class="colored"></td>
+      </tr>
+      <tr>
+        <td>21:00</td>
+        <td>05:00</td>
+        <td>07:00</td>
+        <td>08:00</td>
+        <td class="colored"></td>
+      </tr>
+      <tr>
+        <td>22:00</td>
+        <td>06:00</td>
+        <td>08:00</td>
+        <td>09:00</td>
+        <td class="colored"></td>
+      </tr>
+      <tr>
+        <td>23:00</td>
+        <td>07:00</td>
+        <td>09:00</td>
+        <td>10:00</td>
+        <td class="colored"></td>
+      </tr>
+    </table>
+  </body>
+  <script>
+      function displayDate() {
+        const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const today = new Date();
+        const dayOfWeek = daysOfWeek[today.getDay()];
+        const date = today.toDateString();
+        const output = `${dayOfWeek}, ${date}`;
+        console.log(output);
+        document.getElementById("date").innerHTML = output;
+      }
+      displayDate();
+    </script>
+</html>
