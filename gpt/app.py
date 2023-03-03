@@ -1,9 +1,9 @@
 from flask import Flask, request, jsonify
 import openai
 
-openai.api_key = "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"
+openai.api_key = "xUtfY5DiO7V2CpWCFrUqT3BlbkFJs2H1Ap4E9NRQQc7LQ40I"
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/gpt')
 
 @app.route('/')
 def home():
