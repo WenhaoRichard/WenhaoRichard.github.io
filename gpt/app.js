@@ -14,11 +14,15 @@ function sendMessage() {
         const chatbotMessage = document.createElement('p');
         chatbotMessage.innerText = `Chatbot: ${response}`;
         chatBox.appendChild(chatbotMessage);
+
+        chatBox.scrollTop = chatBox.scrollHeight;
       })
       .catch((error) => {
         const errorMessage = document.createElement('p');
         errorMessage.innerText = `Error: ${error.message}`;
         chatBox.appendChild(errorMessage);
+
+        chatBox.scrollTop = chatBox.scrollHeight;
       });
   }
 }
