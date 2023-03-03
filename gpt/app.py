@@ -12,6 +12,7 @@ def home():
 @app.route('/generate_text', methods=['POST'])
 def generate_text():
     prompt = request.form.get('prompt')
+    print("Received prompt:", prompt)
     response = openai.Completion.create(
         engine="text-davinci-002",
         prompt=prompt,
@@ -20,7 +21,9 @@ def generate_text():
         stop=None,
         temperature=0.5,
     )
-    return jsonify(response.choices[0].text)
+    generated_text = response.choices[0].text
+    print("Generated text:", generated_text)
+    return jsonify(generated_text)
 
 if __name__ == '__main__':
     app.run()
