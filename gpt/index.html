@@ -2,69 +2,37 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>GPT Chatbot</title>
+    <title>GPT-3 Chatbot</title>
 </head>
 <body>
-    <h1>GPT Chatbot</h1>
-    <div id="chatbox"></div>
+    <h1>GPT-3 Chatbot</h1>
+    <p>Enter a message to chat with the AI assistant:</p>
     <input type="text" id="message">
-    <div>change</div>
     <button onclick="sendMessage()">Send</button>
 
+    <div id="chatbox">
+        {% for message in conversation %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    </div>
+
     <script>
-        const API_KEY = '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';
-        const URL = 'https://api.openai.com/v1/engines/davinci-codex/completions';
-
-        let conversation = [];
-
-        async function sendMessage() {
-            let input = document.getElementById('message').value;
+        function sendMessage() {
+            let message = document.getElementById('message').value;
             document.getElementById('message').value = '';
-            conversation.push(`You: ${input}`);
 
-            let response = await getResponse(input);
-
-            conversation.push(`Bot: ${response}`);
-
-            updateChat();
-        }
-
-        async function getResponse(input) {
-            let body = {
-                prompt: input,
-                max_tokens: 150,
-                model: 'text-davinci-002',
-                engine: 'davinci-codex',
-                temperature: 0.5,
-                top_p: 1,
-                n: 1,
-                stream: false,
-                stop: ['\n']
+            let xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    let response = xhr.responseText;
+                    let chatbox = document.getElementById('chatbox');
+                    let message_div = document.createElement('div');
+                    message_div.innerHTML = "<p>You: " + message + "</p><p>AI: " + response + "</p>";
+                    chatbox.appendChild(message_div);
+                }
             };
-
-            let options = {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${API_KEY}`
-                },
-                body: JSON.stringify(body)
-            };
-
-            let response = await fetch(URL, options);
-            let json = await response.json();
-
-            return json.choices[0].text;
-        }
-
-        function updateChat() {
-            let chatbox = document.getElementById('chatbox');
-            chatbox.innerHTML = '';
-            for (let i = 0; i < conversation.length; i++) {
-                let message = document.createElement('div');
-                message.innerHTML = conversation[i];
-                chatbox.appendChild(message);
-            }
+            xhr.open("GET", "/chat?message=" + encodeURIComponent(message), true);
+            xhr.send();
         }
     </script>
 </body>
