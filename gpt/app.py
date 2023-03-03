@@ -4,7 +4,7 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-openai.api_key = os.getenv("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")
+openai.api_key = os.getenv("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")
 
 @app.route('/')
 def home():

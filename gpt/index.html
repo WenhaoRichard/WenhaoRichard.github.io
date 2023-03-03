@@ -12,26 +12,7 @@
     <div id="chat">
         <p>Hello! How can I help you today?</p>
     </div>
-    <script>
-        function sendMessage() {
-            var message = document.getElementById('message').value;
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', '/chat?message=' + message, true);
-            xhr.onload = function() {
-                if (this.status == 200) {
-                    var response = this.responseText;
-                    var chat = document.getElementById('chat');
-                    var p = document.createElement('p');
-                    p.innerText = 'You: ' + message;
-                    chat.appendChild(p);
-                    var p2 = document.createElement('p');
-                    p2.innerText = 'Chatbot: ' + response;
-                    chat.appendChild(p2);
-                    document.getElementById('message').value = '';
-                }
-            };
-            xhr.send();
-        }
-    </script>
+    <script src="openai.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
