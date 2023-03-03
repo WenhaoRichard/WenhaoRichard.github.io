@@ -1,4 +1,4 @@
-const API_KEY = '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';
+const API_KEY = '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';
 const API_URL = 'https://api.openai.com/v1/';
 
 async function sendChatMessage(message) {
