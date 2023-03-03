@@ -1,40 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>GPT AI Bot</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <meta charset="UTF-8">
+    <title>GPT Chatbot</title>
 </head>
 <body>
-    <div class="container mt-4">
-        <h2>GPT AI Bot</h2>
-        <div class="form-group">
-            <label for="prompt">Enter your prompt:</label>
-            <textarea class="form-control" id="prompt" name="prompt" rows="4"></textarea>
-        </div>
-        <button class="btn btn-primary" onclick="generateText()">Generate</button>
-        <div class="form-group mt-4">
-            <label for="generated_text">Generated Text:</label>
-            <textarea class="form-control" id="generated_text" name="generated_text" rows="4" readonly></textarea>
-        </div>
-    </div>
+    <h1>GPT Chatbot</h1>
+    <div id="chatbox"></div>
+    <input type="text" id="message">
+    <button onclick="sendMessage()">Send</button>
+
     <script>
-        function generateText() {
-            var prompt = document.getElementById("prompt").value;
-            axios.post('https://huxiao1.github.io/gpt/generate_text', {
-                prompt: prompt
-            })
-            .then(function (response) {
-                document.getElementById("generated_text").value = response.data;
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
+        const API_KEY = 'xUtfY5DiO7V2CpWCFrUqT3BlbkFJs2H1Ap4E9NRQQc7LQ40I';
+        const URL = 'https://api.openai.com/v1/engines/davinci-codex/completions';
+
+        let conversation = [];
+
+        async function sendMessage() {
+            let input = document.getElementById('message').value;
+            document.getElementById('message').value = '';
+            conversation.push(`You: ${input}`);
+
+            let response = await getResponse(input);
+
+            conversation.push(`Bot: ${response}`);
+
+            updateChat();
+        }
+
+        async function getResponse(input) {
+            let body = {
+                prompt: input,
+                max_tokens: 150,
+                model: 'text-davinci-002',
+                engine: 'davinci-codex',
+                temperature: 0.5,
+                top_p: 1,
+                n: 1,
+                stream: false,
+                stop: ['\n']
+            };
+
+            let options = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${API_KEY}`
+                },
+                body: JSON.stringify(body)
+            };
+
+            let response = await fetch(URL, options);
+            let json = await response.json();
+
+            return json.choices[0].text;
+        }
+
+        function updateChat() {
+            let chatbox = document.getElementById('chatbox');
+            chatbox.innerHTML = '';
+            for (let i = 0; i < conversation.length; i++) {
+                let message = document.createElement('div');
+                message.innerHTML = conversation[i];
+                chatbox.appendChild(message);
+            }
         }
     </script>
 </body>
