@@ -78,7 +78,7 @@ Education
 <dt>
   <img src="../images/purdue.png" width="100" height="110" alt="ufl" align="left">
 </dt>
-<dt>  Purdue University West Lafayettey</dt>
+<dt>  Purdue University West Lafayette</dt>
 <dd>&nbsp;  August 2023 - Now</dd>
 <dd>&nbsp;  Phd, Computer Science</dd>
 </dl>
