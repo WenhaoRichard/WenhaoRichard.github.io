@@ -2,7 +2,7 @@
 title: "PhD"
 excerpt: "How to become a qualified PhD student?"
 sitemap: false
-permalink: /404.html
+permalink: /PhD.html
 ---
 
 # Doing a PhD
