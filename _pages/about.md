@@ -12,7 +12,7 @@ I received the M.Sc. degree in Electrical and Computer Engineering(major) from U
 <dl style="font-family: Arial, sans-serif; font-size: 14px;color: #333; text-align: left; border: 2px solid #3f51b5; padding: 10px; border-radius: 10px;">
   <dt>My Documents</dt>
   <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
-    <a href="./files/CV_Research.pdf" style="color: black; text-decoration: none;">CV</a>
+    <a href="./files/CV_research.pdf" style="color: black; text-decoration: none;">CV</a>
   </dd>
   <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
     <a href="./files/transcript_graduate.pdf" style="color: black; text-decoration: none;">Transcript (Graduate)</a>
