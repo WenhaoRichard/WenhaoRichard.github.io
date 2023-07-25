@@ -8,11 +8,11 @@ redirect_from:
   - /about.html
 ---
 
-I received the M.Sc. degree in Electrical and Computer Engineering(major) and Computer Science(Minor) from University of Florida, United States, in 2021, respectively. My research interests include Security(IoT Security, Software Security, etc.), IoT/Embedded Systems(Control/Application/Hardware).  
+I received the M.Sc. degree in Electrical and Computer Engineering(major) from University of Florida, United States, in 2021. My research interests include Security(Artificial Intelligence, Model Compression, etc.), IoT/Systems(Control/Application).  
 <dl style="font-family: Arial, sans-serif; font-size: 14px;color: #333; text-align: left; border: 2px solid #3f51b5; padding: 10px; border-radius: 10px;">
   <dt>My Documents</dt>
   <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
-    <a href="./files/HuXiao_CV.pdf" style="color: black; text-decoration: none;">CV</a>
+    <a href="./files/CV_Research.pdf" style="color: black; text-decoration: none;">CV</a>
   </dd>
   <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
     <a href="./files/transcript_graduate.pdf" style="color: black; text-decoration: none;">Transcript (Graduate)</a>
@@ -75,31 +75,31 @@ News
 
 Education
 ======
-<dl>
+<!-- <dl>
 <dt>
   <img src="../images/purdue.png" width="100" height="110" alt="ufl" align="left">
 </dt>
 <dt>  Purdue University West Lafayette</dt>
 <dd>&nbsp;  August 2023 - Now</dd>
 <dd>&nbsp;  Phd, Computer Science</dd>
-</dl>
+</dl> -->
 
 <dl>
 <dt>
   <img src="../images/ufl.png" width="100" height="110" alt="ufl" align="left">
 </dt>
 <dt>  University of Florida</dt>
-<dd>&nbsp;  August 2019 - July 2021</dd>
-<dd>&nbsp;  MS, Electrical and Computer Engineering (Major), Computer Science (Minor)</dd>
+<dd>&nbsp;  August 2019 - December 2021</dd>
+<dd>&nbsp;  M.Sc., Electrical and Computer Engineering (Major)</dd>
 </dl>
 
 <dl>
 <dt>
-  <img src="../images/ecjtu.jpg" width="100" height="110" alt="ecjtu" align="left">
+  <img src="../images/scut.jpeg" width="100" height="110" alt="ecjtu" align="left">
 </dt>
-<dt>  East China Jiaotong University</dt>
+<dt>  South China University of Technology</dt>
 <dd>&nbsp;  August 2015 - July 2019</dd>
-<dd>&nbsp;  BE, Software Engineering + Track Traffic Signal and Control (Double Majors)</dd>
+<dd>&nbsp;  BE, Intelligent Science and Technology</dd>
 </dl>
 
 <br/>
@@ -107,7 +107,7 @@ Education
 
 Experience
 ======
-<dl>
+<!-- <dl>
 <dt>
   <img src="../images/waterloo.jpg" width="100" height="110" alt="WATERLOO" align="left">
 </dt>
@@ -115,7 +115,7 @@ Experience
 <dd>&nbsp;  07/2022 - 11/2022</dd>
 <dd>&nbsp;  Research Assistant(Part Time)</dd>
 <dd>&nbsp;  Focus: System Security.</dd>
-</dl>
+</dl> -->
 
 <dl>
 <dt>
@@ -126,7 +126,7 @@ Experience
 <dd>&nbsp;  Research Assistant(Part Time)</dd>
 <dd>&nbsp;  Focus: Autonomous driving robot.</dd>
 </dl>
-
+<!-- 
 <dl>
 <dt>
   <img src="../images/ISCAS.jpg" width="100" height="110" alt="ISCAS" align="left">
@@ -135,7 +135,7 @@ Experience
 <dd>&nbsp;  05/2021 - 05/2022</dd>
 <dd>&nbsp;  Research Assistant(Full Time)</dd>
 <dd>&nbsp;  Focus: Robot systems security and PLC communication security.</dd>
-</dl>
+</dl> -->
 
 <dl>
 <dt>
@@ -146,7 +146,7 @@ Experience
 <dd>&nbsp;  Research Assistant(Part Time)</dd>
 <dd>&nbsp;  Focus: Deep learning model compression.</dd>
 </dl>
-
+<!-- 
 <dl>
 <dt>
   <img src="../images/CASIA.jpg" width="100" height="110" alt="CASIA" align="left">
@@ -155,14 +155,14 @@ Experience
 <dd>&nbsp;  02/2018 - 04/2018</dd>
 <dd>&nbsp;  Research Assistant(Full Time)</dd>
 <dd>&nbsp;  Focus: PLC communication&control.</dd>
-</dl>
+</dl> -->
 
 <br/>
 
 Research Projects
 ======
 
-System
+<!-- System
 ------
 <dl>
 <dt>
@@ -171,9 +171,9 @@ System
 <dt style="text-align: left; padding-left: 115px;">A Hybird-Mode Kernel Designed By Me</dt>
 <dd style="text-align: left; padding-left: 101.5px;">Onging...</dd>
 <dd style="text-align: left; padding-left: 101.5px;"><a href="https://github.com/huxiao1/HuOS">[Link]</a></dd>
-</dl>
+</dl> -->
 
-Communication & Control
+<!-- Communication & Control
 ------
 <dl>
 <dt>
@@ -182,7 +182,7 @@ Communication & Control
 <dt style="text-align: left; padding-left: 115px;">Double Layer Network Communication Based On Modbus Protocol</dt>
 <dd style="text-align: left; padding-left: 101.5px;">Adopt double layer control protocol(Modebus/TCP & Modbus/RTU) to control the motor and large number of lights and fans.</dd>
 <dd style="text-align: left; padding-left: 101.5px;"><a href="http://www.cnki.com.cn/Article/CJFDTotal-DGJY201816010.htm">[Paper]</a>&nbsp;<a href="https://github.com/huxiao1/modbus.git">[Code]</a></dd>
-</dl>
+</dl> -->
 
 AI
 ------
@@ -195,7 +195,7 @@ AI
 <dd style="text-align: left; padding-left: 101.5px;"><a href="https://iopscience.iop.org/article/10.1088/1742-6596/2078/1/012047/meta">[Paper]</a>&nbsp;<a href="https://github.com/huxiao1/ai.git">[Code]</a></dd>
 </dl>
 
-Security
+<!-- Security
 ------
 <dl>
 <dt>
@@ -204,4 +204,4 @@ Security
 <dt style="text-align: left; padding-left: 115px;">Robots Systems Security</dt>
 <dd style="text-align: left; padding-left: 101.5px;">Develop agent programs on Vxworks, QNX, SylixOS and Linux robot systems to get the vulnerabilities and system informations.</dd>
 <dd style="text-align: left; padding-left: 101.5px;"><a href="#">[Not Open Sourced]</a></dd>
-</dl>
+</dl> -->
