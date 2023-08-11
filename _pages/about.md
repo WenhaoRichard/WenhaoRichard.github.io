@@ -122,7 +122,7 @@ Experience
 <dt>  IT Department, China Merchants Bank (CMB) Co. Ltd.</dt>
 <dd>&nbsp;  06/2022 - 06/2023</dd>
 <dd>&nbsp;  Machine Learning & Backend Engineer (Full Time)</dd>
-<dd>&nbsp;  Focus: Application of Large Language Model(LLM) on System Availability and Reliability.</dd>
+<dd>&nbsp;  Focus: Application of Large Language Model (LLM) on System Availability and Reliability.</dd>
 </dl>
 <!-- 
 <dl>
@@ -141,7 +141,7 @@ Experience
 </dt>
 <dt>  Institute of Computing, Chinese Academy of Sciences</dt>
 <dd>&nbsp;  12/2020 - 03/2021</dd>
-<dd>&nbsp;  Research Assistant(Part Time)</dd>
+<dd>&nbsp;  Research Assistant (Part Time)</dd>
 <dd>&nbsp;  Focus: Deep learning model compression.</dd>
 </dl>
 <!-- 
