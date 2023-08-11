@@ -65,8 +65,8 @@ I received the M.Sc. degree in Electrical and Computer Engineering (major) from 
 News
 ======
 <ul>
-  <li>[2022/08] Currently, I am looking for a PhD position in 2024</li>
-  <li>[2022/06 - 2022/08] I am doing a research on General Vision task model based on ViT</li>
+  <li>[2023/08] Currently, I am looking for a PhD position in 2024</li>
+  <li>[2023/06 - 2023/08] I am doing a research on General Vision task model based on ViT</li>
   <li>...</li>
 </ul>
 
