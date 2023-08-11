@@ -97,7 +97,7 @@ Education
 </dt>
 <dt>  South China University of Technology</dt>
 <dd>&nbsp;  August 2015 - July 2019</dd>
-<dd>&nbsp;  BE, Intelligent Science and Technology</dd>
+<dd>&nbsp;  B.Eng., Intelligent Science and Technology</dd>
 </dl>
 
 <br/>
