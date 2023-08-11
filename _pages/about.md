@@ -119,7 +119,7 @@ Experience
 <dt>
   <img src="../images/cmbchina.jpeg" width="100" height="110" alt="CASIA" align="left">
 </dt>
-<dt>  Institute of Automation, Chinese Academy of Sciences</dt>
+<dt>  IT Department, China Merchants Bank (CMB) Co. Ltd.</dt>
 <dd>&nbsp;  06/2022 - 06/2023</dd>
 <dd>&nbsp;  Machine Learning & Backend Engineer(Full Time)</dd>
 <dd>&nbsp;  Focus: Application of Large Language Model(LLM) on System Availability and Reliability.</dd>
