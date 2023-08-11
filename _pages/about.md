@@ -93,7 +93,7 @@ Education
 
 <dl>
 <dt>
-  <img src="../images/scut.jpeg" width="100" height="110" alt="ecjtu" align="left">
+  <img src="../images/scut.jpeg" width="100" height="110" alt="scut" align="left">
 </dt>
 <dt>  South China University of Technology</dt>
 <dd>&nbsp;  August 2015 - July 2019</dd>
@@ -117,11 +117,11 @@ Experience
 
 <dl>
 <dt>
-  <img src="../images/cmbchina.jpeg" width="100" height="110" alt="CASIA" align="left">
+  <img src="../images/cmbchina.jpeg" width="100" height="110" alt="cmbchina" align="left">
 </dt>
 <dt>  IT Department, China Merchants Bank (CMB) Co. Ltd.</dt>
 <dd>&nbsp;  06/2022 - 06/2023</dd>
-<dd>&nbsp;  Machine Learning & Backend Engineer(Full Time)</dd>
+<dd>&nbsp;  Machine Learning & Backend Engineer (Full Time)</dd>
 <dd>&nbsp;  Focus: Application of Large Language Model(LLM) on System Availability and Reliability.</dd>
 </dl>
 <!-- 
