@@ -62,13 +62,11 @@ I received the M.Sc. degree in Electrical and Computer Engineering (major) from 
   });
 </script>
 
-<!-- News -->
+News
 ======
 <ul>
-  <li>[2023/06] I will be a PhD student at Purdue University in August 2023. My advisor is Prof.<a href="http://antoniobianchi.me/">Antonio Bianchi</a></li>
-  <li>[2022/10] Currently, I am looking for a PhD position in 2023</li>
-  <li>[2022/07 - 2022/11] I am a remote research assistant under the supervision of Prof.<a href="https://cs.uwaterloo.ca/~m285xu/">Xu Meng</a> at the Unversity of Waterloo</li>
-  <li>[2021/06 - 2022/06] I am a research assistant under the supervision of Prof.<a href="https://people.ucas.ac.cn/~jingzheng">Jingzheng Wu</a> at the Institute of Software, Chinese Academy of Sciences</li>
+  <li>[2022/08] Currently, I am looking for a PhD position in 2024</li>
+  <li>[2022/06 - 2022/08] I am doing a research on General Vision task model based on ViT</li>
   <li>...</li>
 </ul>
 
