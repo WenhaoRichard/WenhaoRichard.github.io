@@ -20,9 +20,9 @@ I received the M.Sc. degree in Electrical and Computer Engineering (major) from 
   <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
     <a href="./files/transcript_undergraduate.pdf" style="color: black; text-decoration: none;">Transcript (Undergraduate)</a>
   </dd>
-  <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
-    <!-- <a href="https://huxiao1.github.io/PhD.html" style="color: black; text-decoration: none;">How to become a qualified PhD student?</a> -->
-  </dd>
+  <!-- <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
+    <a href="https://huxiao1.github.io/PhD.html" style="color: black; text-decoration: none;">How to become a qualified PhD student?</a>
+  </dd> -->
   <!-- <dt>My Blogs and Writings</dt>
   <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
     <a href="https://github.com//Blog" style="color: black; text-decoration: none;">My Blog</a>
