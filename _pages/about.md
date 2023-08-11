@@ -189,7 +189,7 @@ AI
   <img src="../images/compression.png" width="100" height="110" alt="compression" align="left">
 </dt>
 <dt style="text-align: left; padding-left: 115px;">Deep Learning Model Compression</dt>
-<dd style="text-align: left; padding-left: 101.5px;">Apply quantify method to compress the AlexNet model and prune method to compress the Yolo V3 model so that the models after compression can apply on the embedded platform.</dd>
+<dd style="text-align: left; padding-left: 101.5px;">In this paper, we experimented with using two tricks for model compression: Pruning and Quantization. By utilizing these methods, we got a remarkable improvement in model simplification while retaining a relatively close accuracy.</dd>
 <dd style="text-align: left; padding-left: 101.5px;"><a href="https://iopscience.iop.org/article/10.1088/1742-6596/2078/1/012047/meta">[Paper]</a>&nbsp;<a href="https://github.com/huxiao1/ai.git">[Code]</a></dd>
 </dl>
 
