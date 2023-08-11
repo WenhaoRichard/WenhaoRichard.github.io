@@ -95,7 +95,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "github.com/WenhaoRichard"
+  github           : "WenhaoRichard"
   google_plus      :
   keybase          :
   instagram        :
@@ -237,7 +237,7 @@ defaults:
       comment: true
   # _talks
   - scope:
-      path: "https://github.com/huxiao1/PACMem"
+      path: "https://github.com/1/PACMem"
       type: talks
     values:
       layout: talk
