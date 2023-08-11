@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I received the M.Sc. degree in Electrical and Computer Engineering(major) from University of Florida, United States, in 2021. My research interests include Security(Artificial Intelligence, Model Compression, etc.), IoT/Systems(Control/Application).  
+I received the M.Sc. degree in Electrical and Computer Engineering (major) from University of Florida, United States, in 2021. My research interests include Security (Artificial Intelligence, Model Compression, etc.), IoT/Systems (Control/Application).  
 <dl style="font-family: Arial, sans-serif; font-size: 14px;color: #333; text-align: left; border: 2px solid #3f51b5; padding: 10px; border-radius: 10px;">
   <dt>My Documents</dt>
   <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
@@ -23,14 +23,14 @@ I received the M.Sc. degree in Electrical and Computer Engineering(major) from U
   <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
     <a href="https://huxiao1.github.io/PhD.html" style="color: black; text-decoration: none;">How to become a qualified PhD student?</a>
   </dd>
-  <dt>My Blogs and Writings</dt>
+  <!-- <dt>My Blogs and Writings</dt>
   <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
-    <a href="https://github.com/huxiao1/Blog" style="color: black; text-decoration: none;">My Blog</a>
-  </dd>
-  <dt>Paper Reading Notes</dt>
+    <a href="https://github.com//Blog" style="color: black; text-decoration: none;">My Blog</a>
+  </dd> -->
+  <!-- <dt>Paper Reading Notes</dt>
   <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
     <a href="https://github.com/huxiao1/Paper" style="color: black; text-decoration: none;">Paper Reading</a>
-  </dd>
+  </dd> -->
   <dt>Tools</dt>
   <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
     <a href="../time_diff.html" style="color: black; text-decoration: none;">Time Difference Between China and US</a>
@@ -62,7 +62,7 @@ I received the M.Sc. degree in Electrical and Computer Engineering(major) from U
   });
 </script>
 
-News
+<!-- News -->
 ======
 <ul>
   <li>[2023/06] I will be a PhD student at Purdue University in August 2023. My advisor is Prof.<a href="http://antoniobianchi.me/">Antonio Bianchi</a></li>
@@ -119,12 +119,12 @@ Experience
 
 <dl>
 <dt>
-  <img src="../images/CASIA.jpg" width="100" height="110" alt="CASIA" align="left">
+  <img src="../images/cmbchina.jpeg" width="100" height="110" alt="CASIA" align="left">
 </dt>
 <dt>  Institute of Automation, Chinese Academy of Sciences</dt>
-<dd>&nbsp;  02/2022 - 05/2022</dd>
-<dd>&nbsp;  Research Assistant(Part Time)</dd>
-<dd>&nbsp;  Focus: Autonomous driving robot.</dd>
+<dd>&nbsp;  06/2022 - 06/2023</dd>
+<dd>&nbsp;  Machine Learning & Backend Engineer(Full Time)</dd>
+<dd>&nbsp;  Focus: Application of Large Language Model(LLM) on System Availability and Reliability.</dd>
 </dl>
 <!-- 
 <dl>
