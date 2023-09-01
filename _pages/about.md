@@ -186,18 +186,22 @@ Research Projects
 Security
 ------
 <dl>
-<dt>
-  <img src="../images/visionGeneralist/Denoise.png" width="250" height="110" alt="Denoise" align="left">
-</dt>
-<dt>
-  <img src="../images/visionGeneralist/Deraining.png " width="250" height="110" alt="Deraining" align="left">
-</dt>
-<dt>
-  <img src="../images/visionGeneralist/panopticSeg.png " width="250" height="110" alt="PanopticSeg" align="left">
-</dt>
-<dt>
-  <img src="../images/visionGeneralist/semanticSeg.png " width="250" height="110" alt="semanticSeg" align="left">
-</dt>
+<dt>Denoise</dt>
+  <dd>
+    <img src="../images/visionGeneralist/Denoise.png" width="250" height="110" alt="Denoise" align="left">
+  </dd>
+<dt>Deraining</dt>
+  <dd>
+    <img src="../images/visionGeneralist/Deraining.png " width="250" height="110" alt="Deraining" align="left">
+  </dd>
+<dd>Panoptic Segmentation</dd>
+  <dt>
+    <img src="../images/visionGeneralist/panopticSeg.png " width="250" height="110" alt="PanopticSeg" align="left">
+  </dt>
+<dt>Semantic Segmentation</dt>
+  <dd>
+    <img src="../images/visionGeneralist/semanticSeg.png " width="250" height="110" alt="semanticSeg" align="left">
+  </dd>
 <dt style="text-align: left; padding-left: 115px;">Large Language Model Application: A General Multi-vision-tasks LLM</dt>
 <dd style="text-align: left; padding-left: 101.5px;">Inpired by ViT (Vision Transformer), using MAE mechanisim to fine-tune a pretrained LLM, and we have seen a multi-tasks vision generalist.</dd>
 <dd style="text-align: left; padding-left: 101.5px;"><a href="#">[Not Open Sourced]</a></dd>
