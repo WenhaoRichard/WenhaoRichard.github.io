@@ -186,8 +186,6 @@ Research Projects
   
 LLM research
 ------
-
-
 <dl>
   <dt>
   <img src="../images/visionGeneralist/multiTasks.jpg" width="100" height="110" alt="multitaskers" align="left">
