@@ -187,23 +187,13 @@ Research Projects
 LLM research
 ------
 
-<h3>Denoise</h3>
-<img src="../images/visionGeneralist/Denoise.png" width="250" height="210" alt="Denoise" align="left">
-
-<h3>Deraining</h3>
-<img src="../images/visionGeneralist/Deraining.png" width="250" height="110" alt="Deraining" align="left">
-
-<h3>Panoptic Segmentation</h3>
-<img src="../images/visionGeneralist/panopticSeg.png " width="250" height="110" alt="PanopticSeg" align="left">
-
-
 
 <dl>
   <dt>
   <img src="../images/visionGeneralist/multiTasks.jpg" width="100" height="110" alt="multitaskers" align="left">
   </dt>
   <dt style="text-align: left; padding-left: 115px;">Large Language Model Application: A General Multi-vision-tasks LLM</dt>
-  <dd style="text-align: left; padding-left: 101.5px;">Inpired by ViT (Vision Transformer), using MAE mechanisim to fine-tune a pretrained LLM, and we have seen a multi-tasks vision generalist.</dd>
+  <dd style="text-align: left; padding-left: 101.5px;">Inpired by ViT (Vision Transformer), using MAE mechanisim to fine-tune a pretrained LLM, and we have seen a multi-tasks vision generalist, including Denoise, Derain, Panoptic Segmentation, Semantic Segmentation, etc.</dd>
   <dd style="text-align: left; padding-left: 101.5px;"><a href="#">[Not Open Sourced]</a></dd>
 </dl>
 
