@@ -187,29 +187,29 @@ Research Projects
 LLM research
 ------
 
-<P width=100%>Denoise</p>
-<div width=100%>
-  <img src="../images/visionGeneralist/Denoise.png" width="250" height="210" alt="Denoise" align="left">
-</div>
+<p>Denoise</p>
+<img src="../images/visionGeneralist/Denoise.png" width="250" height="210" alt="Denoise" align="left">
 
 
-<P width = 100%>Deraining</p>
-  <img src="../images/visionGeneralist/Deraining.png" width="250" height="110" alt="Deraining" align="left">
+<p>Deraining</p>
+<img src="../images/visionGeneralist/Deraining.png" width="250" height="110" alt="Deraining" align="left">
 
 <p>Panoptic Segmentation</p>
 <img src="../images/visionGeneralist/panopticSeg.png " width="250" height="110" alt="PanopticSeg" align="left">
 
+<dl>
+<dt style="text-align: left; padding-left: 101.5px;">Semantic Segmentation</dt>
+<dt>
+<img src="../images/visionGeneralist/semanticSeg.png " width="110" height="110" alt="semanticSeg" align="left">
+</dt>
+</dl>
 
-<p>Semantic Segmentation</p>
-<img src="../images/visionGeneralist/semanticSeg.png " width="250" height="110" alt="semanticSeg" align="left">
-
-<div>
-  <dl>
+<dl>
   <dt style="text-align: left; padding-left: 115px;">Large Language Model Application: A General Multi-vision-tasks LLM</dt>
   <dd style="text-align: left; padding-left: 101.5px;">Inpired by ViT (Vision Transformer), using MAE mechanisim to fine-tune a pretrained LLM, and we have seen a multi-tasks vision generalist.</dd>
   <dd style="text-align: left; padding-left: 101.5px;"><a href="#">[Not Open Sourced]</a></dd>
-  </dl>
-</div>
+</dl>
+
 Model Compression
 ------
 <dl>
