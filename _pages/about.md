@@ -204,6 +204,9 @@ LLM research
 </dl>
 
 <dl>
+  <dt>
+  <img src="../images/visionGeneralist/multiTasks.jpg" width="100" height="110" alt="multitaskers" align="left">
+  </dt>
   <dt style="text-align: left; padding-left: 115px;">Large Language Model Application: A General Multi-vision-tasks LLM</dt>
   <dd style="text-align: left; padding-left: 101.5px;">Inpired by ViT (Vision Transformer), using MAE mechanisim to fine-tune a pretrained LLM, and we have seen a multi-tasks vision generalist.</dd>
   <dd style="text-align: left; padding-left: 101.5px;"><a href="#">[Not Open Sourced]</a></dd>
