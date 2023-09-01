@@ -186,15 +186,17 @@ Research Projects
   
 LLM research
 ------
-<ul>
-<p>Denoise</p>
-  <img src="../images/visionGeneralist/Denoise.png" width="250" height="210" alt="Denoise" align="left">
-</ul>
 
-<ul>
-<p>Deraining</p>
+<div><a>Denoise</a></div>
+<div>
+  <img src="../images/visionGeneralist/Denoise.png" width="250" height="210" alt="Denoise" align="left">
+</div>
+
+
+<div><a>Deraining</a></div>
+<div>
   <img src="../images/visionGeneralist/Deraining.png" width="250" height="110" alt="Deraining" align="left">
-</ul>
+</div>
 
 <ul>
 <p>Panoptic Segmentation</p>
