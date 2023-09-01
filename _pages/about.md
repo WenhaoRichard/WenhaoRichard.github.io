@@ -187,38 +187,35 @@ Research Projects
 LLM research
 ------
 
-<p>
-  <dl>
-  <dt>Denoise</dt>
-  <dd>
-    <img src="../images/visionGeneralist/Denoise.png" width="250" height="210" alt="Denoise" align="left">
-  </dd>
-  </dl>
-</p>
-<p>
-  <dl>
-  <dt>Deraining</dt>
-  <dd>
-    <img src="../images/visionGeneralist/Deraining.png" width="250" height="110" alt="Deraining" align="left">
-  </dd>
-  </dl>
-</p>
-<p>
-  <dl>
-  <dt>Panoptic Segmentation</dt>
-  <dd>
-    <img src="../images/visionGeneralist/panopticSeg.png " width="250" height="110" alt="PanopticSeg" align="left">
-  </dd>
-  </dl>
-</p>
-<p>
-  <dl>
-  <dt>Semantic Segmentation</dt>
-  <dd>
-    <img src="../images/visionGeneralist/semanticSeg.png " width="250" height="110" alt="semanticSeg" align="left">
-  </dd>
-  </dl>
-</p>
+
+<dl>
+<dt>Denoise</dt>
+<dd>
+  <img src="../images/visionGeneralist/Denoise.png" width="250" height="210" alt="Denoise" align="left">
+</dd>
+</dl>
+
+<dl>
+<dt>Deraining</dt>
+<dd>
+  <img src="../images/visionGeneralist/Deraining.png" width="250" height="110" alt="Deraining" align="left">
+</dd>
+</dl>
+
+<dl>
+<dt>Panoptic Segmentation</dt>
+<dd>
+  <img src="../images/visionGeneralist/panopticSeg.png " width="250" height="110" alt="PanopticSeg" align="left">
+</dd>
+</dl>
+
+<dl>
+<dt>Semantic Segmentation</dt>
+<dd>
+  <img src="../images/visionGeneralist/semanticSeg.png " width="250" height="110" alt="semanticSeg" align="left">
+</dd>
+</dl>
+
 <dl>
 <dt style="text-align: left; padding-left: 115px;">Large Language Model Application: A General Multi-vision-tasks LLM</dt>
 <dd style="text-align: left; padding-left: 101.5px;">Inpired by ViT (Vision Transformer), using MAE mechanisim to fine-tune a pretrained LLM, and we have seen a multi-tasks vision generalist.</dd>
