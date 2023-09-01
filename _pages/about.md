@@ -187,14 +187,14 @@ Research Projects
 LLM research
 ------
 
-<div><a>Denoise</a></div>
-<div>
+<div width=100%><a>Denoise</a></div>
+<div width=100%>
   <img src="../images/visionGeneralist/Denoise.png" width="250" height="210" alt="Denoise" align="left">
 </div>
 
 
-<div><a>Deraining</a></div>
-<div>
+<div width=100%><a>Deraining</a></div>
+<div width=100%>
   <img src="../images/visionGeneralist/Deraining.png" width="250" height="110" alt="Deraining" align="left">
 </div>
 
@@ -209,6 +209,7 @@ LLM research
 </ul>
 
 <dl>
+
 <dt style="text-align: left; padding-left: 115px;">Large Language Model Application: A General Multi-vision-tasks LLM</dt>
 <dd style="text-align: left; padding-left: 101.5px;">Inpired by ViT (Vision Transformer), using MAE mechanisim to fine-tune a pretrained LLM, and we have seen a multi-tasks vision generalist.</dd>
 <dd style="text-align: left; padding-left: 101.5px;"><a href="#">[Not Open Sourced]</a></dd>
