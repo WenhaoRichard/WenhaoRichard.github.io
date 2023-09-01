@@ -186,33 +186,25 @@ Research Projects
   
 LLM research
 ------
-<dl>
-<dd>Denoise</dd>
-<dt>
+<ul>
+<p>Denoise</p>
   <img src="../images/visionGeneralist/Denoise.png" width="250" height="210" alt="Denoise" align="left">
-</dt>
-</dl>
+</ul>
 
-<dl>
-<dd>Deraining</dd>
-<dt>
+<ul>
+<p>Deraining</p>
   <img src="../images/visionGeneralist/Deraining.png" width="250" height="110" alt="Deraining" align="left">
-</dt>
-</dl>
+</ul>
 
-<dl>
-<dd>Panoptic Segmentation</dd>
-<dt>
+<ul>
+<p>Panoptic Segmentation</p>
   <img src="../images/visionGeneralist/panopticSeg.png " width="250" height="110" alt="PanopticSeg" align="left">
-</dt>
-</dl>
+</ul>
 
-<dl>
-<dd>Semantic Segmentation</dd>
-<dt>
+<ul>
+<p>Semantic Segmentation</p>
   <img src="../images/visionGeneralist/semanticSeg.png " width="250" height="110" alt="semanticSeg" align="left">
-</dt>
-</dl>
+</ul>
 
 <dl>
 <dt style="text-align: left; padding-left: 115px;">Large Language Model Application: A General Multi-vision-tasks LLM</dt>
