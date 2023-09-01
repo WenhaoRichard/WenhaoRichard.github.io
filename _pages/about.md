@@ -196,12 +196,7 @@ LLM research
 <h3>Panoptic Segmentation</h3>
 <img src="../images/visionGeneralist/panopticSeg.png " width="250" height="110" alt="PanopticSeg" align="left">
 
-<dl>
-<dt style="text-align: left; padding-left: 101.5px;">Semantic Segmentation</dt>
-<dt>
-<img src="../images/visionGeneralist/semanticSeg.png " width="100" height="70" alt="semanticSeg" align="left">
-</dt>
-</dl>
+
 
 <dl>
   <dt>
