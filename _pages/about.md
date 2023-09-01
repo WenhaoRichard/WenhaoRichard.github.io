@@ -181,8 +181,27 @@ Research Projects
 <dd style="text-align: left; padding-left: 101.5px;">Adopt double layer control protocol(Modebus/TCP & Modbus/RTU) to control the motor and large number of lights and fans.</dd>
 <dd style="text-align: left; padding-left: 101.5px;"><a href="http://www.cnki.com.cn/Article/CJFDTotal-DGJY201816010.htm">[Paper]</a>&nbsp;<a href="https://github.com/huxiao1/modbus.git">[Code]</a></dd>
 </dl> -->
+Security
+------
+<dl>
+<dt>
+  <img src="../images/visionGeneralist/Denoise.png" width="250" height="110" alt="Denoise" align="left">
+</dt>
+<dt>
+  <img src="../images/visionGeneralist/Deraining.png " width="250" height="110" alt="Deraining" align="left">
+</dt>
+<dt>
+  <img src="../images/visionGeneralist/panopticSeg.png " width="250" height="110" alt="PanopticSeg" align="left">
+</dt>
+<dt>
+  <img src="../images/visionGeneralist/semanticSeg.png " width="250" height="110" alt="semanticSeg" align="left">
+</dt>
+<dt style="text-align: left; padding-left: 115px;">Large Language Model Application: A General Multi-vision-tasks LLM</dt>
+<dd style="text-align: left; padding-left: 101.5px;">Inpired by ViT (Vision Transformer), using MAE mechanisim to fine-tune a pretrained LLM, and we have seen a multi-tasks vision generalist.</dd>
+<dd style="text-align: left; padding-left: 101.5px;"><a href="#">[Not Open Sourced]</a></dd>
+</dl>
 
-AI
+Model Compression
 ------
 <dl>
 <dt>
@@ -193,13 +212,3 @@ AI
 <dd style="text-align: left; padding-left: 101.5px;"><a href="https://iopscience.iop.org/article/10.1088/1742-6596/2078/1/012047/meta">[Paper]</a>&nbsp;<a href="https://github.com/huxiao1/ai.git">[Code]</a></dd>
 </dl>
 
-<!-- Security
-------
-<dl>
-<dt>
-  <img src="../images/security.jpg" width="100" height="110" alt="security" align="left">
-</dt>
-<dt style="text-align: left; padding-left: 115px;">Robots Systems Security</dt>
-<dd style="text-align: left; padding-left: 101.5px;">Develop agent programs on Vxworks, QNX, SylixOS and Linux robot systems to get the vulnerabilities and system informations.</dd>
-<dd style="text-align: left; padding-left: 101.5px;"><a href="#">[Not Open Sourced]</a></dd>
-</dl> -->
