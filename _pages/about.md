@@ -186,34 +186,32 @@ Research Projects
   
 LLM research
 ------
-
-
 <dl>
-<dt>Denoise</dt>
-<dd>
+<dd>Denoise</dd>
+<dt>
   <img src="../images/visionGeneralist/Denoise.png" width="250" height="210" alt="Denoise" align="left">
-</dd>
+</dt>
 </dl>
 
 <dl>
-<dt>Deraining</dt>
-<dd>
+<dd>Deraining</dd>
+<dt>
   <img src="../images/visionGeneralist/Deraining.png" width="250" height="110" alt="Deraining" align="left">
-</dd>
+</dt>
 </dl>
 
 <dl>
-<dt>Panoptic Segmentation</dt>
-<dd>
+<dd>Panoptic Segmentation</dd>
+<dt>
   <img src="../images/visionGeneralist/panopticSeg.png " width="250" height="110" alt="PanopticSeg" align="left">
-</dd>
+</dt>
 </dl>
 
 <dl>
-<dt>Semantic Segmentation</dt>
-<dd>
+<dd>Semantic Segmentation</dd>
+<dt>
   <img src="../images/visionGeneralist/semanticSeg.png " width="250" height="110" alt="semanticSeg" align="left">
-</dd>
+</dt>
 </dl>
 
 <dl>
