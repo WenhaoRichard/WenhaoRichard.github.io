@@ -183,25 +183,30 @@ Research Projects
 <dd style="text-align: left; padding-left: 101.5px;">Adopt double layer control protocol(Modebus/TCP & Modbus/RTU) to control the motor and large number of lights and fans.</dd>
 <dd style="text-align: left; padding-left: 101.5px;"><a href="http://www.cnki.com.cn/Article/CJFDTotal-DGJY201816010.htm">[Paper]</a>&nbsp;<a href="https://github.com/huxiao1/modbus.git">[Code]</a></dd>
 </dl> -->
-Security
+  
+LLM research
 ------
 <dl>
 <dt>Denoise</dt>
   <dd>
-    <img src="../images/visionGeneralist/Denoise.png" width="250" height="110" alt="Denoise" align="left">
+    <img src="../images/visionGeneralist/Denoise.png" width="250" height="210" alt="Denoise" align="left">
   </dd>
+<br/>
 <dt>Deraining</dt>
   <dd>
     <img src="../images/visionGeneralist/Deraining.png " width="250" height="110" alt="Deraining" align="left">
   </dd>
-<dd>Panoptic Segmentation</dd>
-  <dt>
+<br/>
+<dt>Panoptic Segmentation</dt>
+  <dd>
     <img src="../images/visionGeneralist/panopticSeg.png " width="250" height="110" alt="PanopticSeg" align="left">
-  </dt>
+  </dd>
+<br/>
 <dt>Semantic Segmentation</dt>
   <dd>
     <img src="../images/visionGeneralist/semanticSeg.png " width="250" height="110" alt="semanticSeg" align="left">
   </dd>
+<br/>
 <dt style="text-align: left; padding-left: 115px;">Large Language Model Application: A General Multi-vision-tasks LLM</dt>
 <dd style="text-align: left; padding-left: 101.5px;">Inpired by ViT (Vision Transformer), using MAE mechanisim to fine-tune a pretrained LLM, and we have seen a multi-tasks vision generalist.</dd>
 <dd style="text-align: left; padding-left: 101.5px;"><a href="#">[Not Open Sourced]</a></dd>
