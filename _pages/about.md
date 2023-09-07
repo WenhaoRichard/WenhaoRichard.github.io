@@ -18,7 +18,8 @@ I received the M.Sc. degree in Electrical and Computer Engineering (major) from 
     <a href="./files/transcript_graduate.pdf" style="color: black; text-decoration: none;">Transcript (Graduate)</a>
   </dd>
   <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
-    <a href="./files/undergraduateTranscript.pdf" style="color: black; text-decoration: none;">Transcript(Undergraduate)</a>
+    <a href="./files/Transcript_Undergraduate.pdf" style="color: black; text-decoration: none;">Transcript(Undergraduate)</a>
+    <a href="./files/undergraduateTranscript.pdf" style="color: black; text-decoration: none;">Certificate (Undergraduate)</a>
   </dd>
     
   <!-- <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
