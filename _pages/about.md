@@ -185,13 +185,27 @@ Research Projects
 <dd style="text-align: left; padding-left: 101.5px;">Adopt double layer control protocol(Modebus/TCP & Modbus/RTU) to control the motor and large number of lights and fans.</dd>
 <dd style="text-align: left; padding-left: 101.5px;"><a href="http://www.cnki.com.cn/Article/CJFDTotal-DGJY201816010.htm">[Paper]</a>&nbsp;<a href="https://github.com/huxiao1/modbus.git">[Code]</a></dd>
 </dl> -->
+<style>
+    .zoomable {
+      transition: transform 0.2s; /* 动画效果 */
+      object-fit: cover; /* 保持图片比例 */
+      width: 200px;
+      height: 150px;
+      margin: 10px;
+    }
+
+    .zoomable:hover {
+      transform: scale(1.1); /* 放大到原始尺寸的 110% */
+    }
+</style>
   
 LLM research
 ------
-<dl>
+
   <dt>
   <img src="../images/visionGeneralist/multiTasks.jpg" width="100" height="110" alt="multitaskers" align="left">
   </dt>
+<dl>
   <dt style="text-align: left; padding-left: 115px;">Large Language Model Application: A General Multi-vision-tasks LLM</dt>
   <dd style="text-align: left; padding-left: 101.5px;">Inpired by ViT (Vision Transformer), using MAE mechanisim to fine-tune a pretrained LLM, and we have seen a multi-tasks vision generalist, including Denoise, Derain, Panoptic Segmentation, Semantic Segmentation, etc.</dd>
   <dd style="text-align: left; padding-left: 101.5px;"><a href="#">[Not Open Sourced]</a></dd>
@@ -199,10 +213,15 @@ LLM research
 
 Model Compression
 ------
+
+<div style="text-align: center;">
+  <img src="../images/compression.png" alt="compression" style="width:250px;height:150px; object-fit:cover; margin:10px;" class="zoomable">
+  <img src="../images/1.png" alt="Image 1" style="width: 250px; height: 150px; object-fit: cover; margin: 10px;" class="zoomable">
+    <img src="../images/4.jpg" alt="Image 2" style="width: 200px; height: 150px; object-fit: cover; margin: 10px;" class="zoomable">
+    <!-- <img src="image3.png" alt="Image 3" style="width: 200px; height: 150px; object-fit: cover; margin: 10px;"> -->
+</div>
+
 <dl>
-<dt>
-  <img src="../images/compression.png" width="100" height="110" alt="compression" align="left">
-</dt>
 <dt style="text-align: left; padding-left: 115px;">Deep Learning Model Compression</dt>
 <dd style="text-align: left; padding-left: 101.5px;">In this paper, we experimented with using two tricks for model compression: Pruning and Quantization. By utilizing these methods, we got a remarkable improvement in model simplification while retaining a relatively close accuracy.</dd>
 <dd style="text-align: left; padding-left: 101.5px;"><a href="https://iopscience.iop.org/article/10.1088/1742-6596/2078/1/012047/meta">[Paper]</a>&nbsp;<a href="https://github.com/huxiao1/ai.git">[Code]</a></dd>
