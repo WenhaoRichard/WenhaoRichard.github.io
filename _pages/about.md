@@ -7,7 +7,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-**Hao is currently a Machine Learning and Backend Developer at China Merchants Bank Co.,** 
+**Hao is currently a Machine Learning and Backend Developer at China Merchants Bank Co.,**  
 He graduated with a B.Eng. in Artificial Technology and Science from South China University of Technology (SCUT). In 2021, he earned his M.Sc. degree in Electrical and Computer Engineering from the University of Florida, USA. During his initial career phase, he applied Computer Vision and Natural Language Processing techniques to analyze health and log data within a mobile app, which boasts over 100 million users. His research interests are focused on Transfer Learning in Computer Vision using Large Language Models, AI for Systems, and the integration of AI with IoT (Internet of Things)."
 <dl style="font-family: Arial, sans-serif; font-size: 14px;color: #333; text-align: left; border: 2px solid #3f51b5; padding: 10px; border-radius: 10px;">
   <dt>My Documents</dt>
