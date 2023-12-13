@@ -199,29 +199,29 @@ Research Projects
     }
 </style>
   
-LLM research
+Vision-Language Model research
 ------
 
   <dt>
-  <img src="../images/multiTasks.jpg" width="100" height="110" alt="multitaskers" align="left" class="zoomable">
+  <img src="../images/multiTasks.jpg" alt="multiTasker" style="width:250px; height:150px; object-fit:cover; margin:10px;" class="zoomable">
   </dt>
 <dl>
   <dt style="text-align: left; padding-left: 115px;">Large Language Model Application: A General Multi-vision-tasks LLM</dt>
-  <dd style="text-align: left; padding-left: 101.5px;">Inpired by ViT (Vision Transformer), using MAE mechanisim to fine-tune a pretrained LLM, and we have seen a multi-tasks vision generalist, including Denoise, Derain, Panoptic Segmentation, Semantic Segmentation, etc.</dd>
-  <dd style="text-align: left; padding-left: 101.5px;"><a href="#">[Not Open Sourced]</a></dd>
+  <dd style="text-align: left; padding-left: 10px;">Inspired by the Vision Transformer (ViT) model, we have employed the Masked Autoencoder (MAE) mechanism to fine-tune a pre-trained large language model (LLM). This approach has significantly enhanced our multi-task vision generalist model. The improved model now excels in various tasks, including image denoising, rain removal (deraining), panoptic segmentation, and semantic segmentation, among others</dd>
+  <dd style="text-align: left; padding-left: 10px;"><a href="#">[Not Open Sourced]</a></dd>
 </dl>
 
 Model Compression
 ------
 
 <div style="text-align: center;">
-  <img src="../images/pruendResult.png" alt="Image 0" style="width:250px; height:150px; object-fit:cover; margin:10px;" class="zoomable">
+  <img src="../images/prunedResult.png" alt="Image 0" style="width:250px; height:150px; object-fit:cover; margin:10px;" class="zoomable">
   <img src="../images/testPrune.jpg" alt="Image 1" style="width: 250px; height: 150px; object-fit: cover; margin: 10px;" class="zoomable">
 </div>
 
 <dl>
 <dt style="text-align: left; padding-left: 15px;">Deep Learning Model Compression</dt>
 <dd style="text-align: left; padding-left: 10px;">In this paper, we experimented with using two tricks for model compression: Pruning and Quantization. By utilizing these methods, we got a remarkable improvement in model simplification while retaining a relatively close accuracy.</dd>
-<dd style="text-align: left; padding-left: 101.5px;"><a href="https://iopscience.iop.org/article/10.1088/1742-6596/2078/1/012047/meta">[Paper]</a>&nbsp;<a href="https://github.com/huxiao1/ai.git">[Code]</a></dd>
+<dd style="text-align: left; padding-left: 10px;"><a href="https://iopscience.iop.org/article/10.1088/1742-6596/2078/1/012047/meta">[Paper]</a>&nbsp;<a href="https://github.com/WenhaoRichard/ModelCompression">[Code]</a></dd>
 </dl>
 
