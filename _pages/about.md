@@ -215,7 +215,7 @@ Model Compression
 ------
 
 <div style="text-align: center;">
-  <img src="../images/prunedModel.png" alt="Image 0" style="width:250px; height:150px; object-fit:cover; margin:10px;" class="zoomable">
+  <img src="../images/pruendResult.png" alt="Image 0" style="width:250px; height:150px; object-fit:cover; margin:10px;" class="zoomable">
   <img src="../images/testPrune.jpg" alt="Image 1" style="width: 250px; height: 150px; object-fit: cover; margin: 10px;" class="zoomable">
 </div>
 
