@@ -7,8 +7,8 @@ redirect_from:
   - /about/
   - /about.html
 ---
-
-I received the M.Sc. degree in Electrical and Computer Engineering (major) from University of Florida, United States, in 2021. My research interests include Transfer Learning in Computer Vision with Large Language Model, AI for Systems, AI + IoTs.  
+**Hao is currently a Machine Learning and Backend Developer at China Merchants Bank Co.,** 
+He graduated with a B.Eng. in Artificial Technology and Science from South China University of Technology (SCUT). In 2021, he earned his M.Sc. degree in Electrical and Computer Engineering from the University of Florida, USA. During his initial career phase, he applied Computer Vision and Natural Language Processing techniques to analyze health and log data within a mobile app, which boasts over 100 million users. His research interests are focused on Transfer Learning in Computer Vision using Large Language Models, AI for Systems, and the integration of AI with IoT (Internet of Things)."
 <dl style="font-family: Arial, sans-serif; font-size: 14px;color: #333; text-align: left; border: 2px solid #3f51b5; padding: 10px; border-radius: 10px;">
   <dt>My Documents</dt>
   <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
@@ -69,7 +69,7 @@ I received the M.Sc. degree in Electrical and Computer Engineering (major) from 
 News
 ======
 <ul>
-  <li>[2023/08] Currently, I am looking for a PhD position in 2024</li>
+  <li>[2023/12] As a Machine Learning & Backend Developer, He is actively seeking opportunites as a PhD in AI and its Intersection Domain</li>
   <li>[2023/06 - 2023/08] I am doing a research on devise a better multi-vision tasks generalist based on ViTs</li>
   <li>...</li>
 </ul>
@@ -124,7 +124,7 @@ Experience
   <img src="../images/cmbchina.jpeg" width="100" height="110" alt="cmbchina" align="left">
 </dt>
 <dt>  IT Department, China Merchants Bank (CMB) Co. Ltd.</dt>
-<dd>&nbsp;  06/2022 - 06/2023</dd>
+<dd>&nbsp;  06/2022 - Now</dd>
 <dd>&nbsp;  Machine Learning & Backend Engineer (Full Time)</dd>
 <dd>&nbsp;  Focus: Application of Large Language Model (LLM) on System Availability and Reliability.</dd>
 </dl>
