@@ -203,7 +203,7 @@ LLM research
 ------
 
   <dt>
-  <img src="../images/visionGeneralist/multiTasks.jpg" width="100" height="110" alt="multitaskers" align="left" class="zoomable">
+  <img src="../images/multiTasks.jpg" width="100" height="110" alt="multitaskers" align="left" class="zoomable">
   </dt>
 <dl>
   <dt style="text-align: left; padding-left: 115px;">Large Language Model Application: A General Multi-vision-tasks LLM</dt>
@@ -215,10 +215,8 @@ Model Compression
 ------
 
 <div style="text-align: center;">
-  <img src="../images/compression.png" alt="compression" style="width:250px;height:150px; object-fit:cover; margin:10px;" class="zoomable">
-  <img src="../images/1.png" alt="Image 1" style="width: 250px; height: 150px; object-fit: cover; margin: 10px;" class="zoomable">
-    <img src="../images/4.jpg" alt="Image 2" style="width: 200px; height: 150px; object-fit: cover; margin: 10px;" class="zoomable">
-    <!-- <img src="image3.png" alt="Image 3" style="width: 200px; height: 150px; object-fit: cover; margin: 10px;"> -->
+  <img src="../images/prunedModel.png" alt="Image 0" style="width:250px; height:150px; object-fit:cover; margin:10px;" class="zoomable">
+  <img src="../images/testPrune.jpg" alt="Image 1" style="width: 250px; height: 150px; object-fit: cover; margin: 10px;" class="zoomable">
 </div>
 
 <dl>
