@@ -203,7 +203,7 @@ LLM research
 ------
 
   <dt>
-  <img src="../images/visionGeneralist/multiTasks.jpg" width="100" height="110" alt="multitaskers" align="left">
+  <img src="../images/visionGeneralist/multiTasks.jpg" width="100" height="110" alt="multitaskers" align="left" class="zoomable">
   </dt>
 <dl>
   <dt style="text-align: left; padding-left: 115px;">Large Language Model Application: A General Multi-vision-tasks LLM</dt>
@@ -222,8 +222,8 @@ Model Compression
 </div>
 
 <dl>
-<dt style="text-align: left; padding-left: 115px;">Deep Learning Model Compression</dt>
-<dd style="text-align: left; padding-left: 101.5px;">In this paper, we experimented with using two tricks for model compression: Pruning and Quantization. By utilizing these methods, we got a remarkable improvement in model simplification while retaining a relatively close accuracy.</dd>
+<dt style="text-align: left; padding-left: 15px;">Deep Learning Model Compression</dt>
+<dd style="text-align: left; padding-left: 10px;">In this paper, we experimented with using two tricks for model compression: Pruning and Quantization. By utilizing these methods, we got a remarkable improvement in model simplification while retaining a relatively close accuracy.</dd>
 <dd style="text-align: left; padding-left: 101.5px;"><a href="https://iopscience.iop.org/article/10.1088/1742-6596/2078/1/012047/meta">[Paper]</a>&nbsp;<a href="https://github.com/huxiao1/ai.git">[Code]</a></dd>
 </dl>
 
