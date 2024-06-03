@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>中美时差转换</title>
+	<title>Time Difference Calculator</title>
 	<style>
 		.container {
 			margin: 0 auto;
@@ -52,11 +52,11 @@
 </head>
 <body>
 	<div class="container">
-		<h1>中美时差转换</h1>
-		<p>正确的时间格式，如：2023-02-21 08:30:00</p>
-		<label for="beijing-time">北京时间：</label>
+		<h1 style="width: auto;">Time Difference Calculator</h1>
+		<p>Correct format，e.g. 2023-12-21 08:30:00</p>
+		<label for="beijing-time" style="width:auto">Time in Beijing：</label>
 		<input type="text" id="beijing-time">
-		<button id="convert-btn">转换</button>
+		<button id="convert-btn">Convert</button>
 		<div id="result2"></div>
 		<div id="result3"></div>
 		<div id="result"></div>
@@ -72,22 +72,22 @@
 			const beijingTime = beijingTimeInput.value;
 			const beijingDate = new Date(beijingTime);
 			if (isNaN(beijingDate.getTime())) {
-				resultDiv.innerHTML = '请输入正确的时间格式，如：2023-02-20 12:00:00';
+				resultDiv.innerHTML = 'Please input correct time，e.g.：2023-02-20 12:00:00';
 				resultDiv2.innerHTML = '请输入正确的时间格式，如：2023-02-20 12:00:00';
-				resultDiv3.innerHTML = '请输入正确的时间格式，如：2023-02-20 12:00:00';
+				resultDiv3.innerHTML = '正しい時刻形式を入力してください，例えば: 2023-02-20 12:00:00';
 			} else {
 				//const usTime = new Date(beijingDate.getTime() - 780 * 60 * 1000);
 				const usTime = new Date(beijingDate.getTime());
 				const usTimeStr = usTime.toLocaleString('en-US', { timeZone: 'America/New_York'});
-				resultDiv.innerHTML = `美东时间：${usTimeStr}`;
+				resultDiv.innerHTML = `美东时间/Eastern Time/米東部時間：${usTimeStr}`;
 
 				const usTime2 = new Date(beijingDate.getTime());
 				const usTimeStr2 = usTime2.toLocaleString('en-US', { timeZone: 'America/Los_Angeles'});
-				resultDiv2.innerHTML = `美西时间：${usTimeStr2}`;
+				resultDiv2.innerHTML = `美西时间/Western Time/米西部時間：${usTimeStr2}`;
 
 				const usTime3 = new Date(beijingDate.getTime());
 				const usTimeStr3 = usTime3.toLocaleString('en-US', { timeZone: 'America/Chicago'});
-				resultDiv3.innerHTML = `美中时间：${usTimeStr3}`;
+				resultDiv3.innerHTML = `美中时间/Central time/中部時間：${usTimeStr3}`;
 			}
 		});
 	</script>
