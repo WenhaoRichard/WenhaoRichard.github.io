@@ -8,9 +8,9 @@ redirect_from:
   - /about.html
 ---
 **Hao is currently a Machine Learning and Backend Developer at China Merchants Bank Co.,**  
-He graduated with a B.Eng. in Artificial Technology and Science from South China University of Technology (SCUT). In 2021, he earned his M.Sc. degree in Electrical and Computer Engineering from the University of Florida.  
-During his initial career phase, he applied Computer Vision and Natural Language Processing techniques to analyze health and log data within a mobile app, which boasts over 100 million users.  
+He graduated with a B.Eng. in Artificial Technology and Science from South China University of Technology (SCUT). In 2021, he earned his M.Sc. degree in Electrical and Computer Engineering from the University of Florida.  During his initial career phase, he applied Computer Vision and Natural Language Processing techniques to analyze health and log data within a mobile app, which boasts over 100 million users.  
 His research interests are focused on Transfer Learning in Computer Vision using Large Language Models, AI for Systems, and the integration of AI with IoT (Internet of Things)."
+He is now working as a research assitant under the supervision of Professor Antonio at University of Purdue.
 <dl style="font-family: Arial, sans-serif; font-size: 14px;color: #333; text-align: left; border: 2px solid #3f51b5; padding: 10px; border-radius: 10px;">
   <dt>My Documents</dt>
   <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
@@ -129,18 +129,25 @@ Research Projects
 Vision-Language Model research
 ------
 
-  <dt>
-  <img src="../images/multiTasks.jpg" alt="multiTasker" style="width:250px; height:150px; object-fit:cover; margin:10px;" class="zoomable">
-  </dt>
+  <!-- <div style="text-align: center;">
+  <img src="../images/model_arch.png" alt="multiTasker" style="width:250px; height:150px; object-fit:cover; margin:10px;" class="zoomable">
+</div> -->
+<div style="text-align: center;">
+  <img src="../images/model_arch.png" alt="multiTasker" style="width:auto; height:auto; max-width:100%; max-height:300px; object-fit:contain; margin:10px;" class="zoomable">
+</div>
 <dl>
-  <dt style="text-align: left; padding-left: 15px;">Large Language Model Application: A General Multi-vision-tasks LLM</dt>
-  <dd style="text-align: left; padding-left: 10px;">Inspired by the Vision Transformer (ViT) model, we have employed the Masked Autoencoder (MAE) mechanism to fine-tune a pre-trained large language model (LLM). This approach has significantly enhanced our multi-task vision generalist model. The improved model now excels in various tasks, including image denoising, rain removal (deraining), panoptic segmentation, and semantic segmentation, among others</dd>
+  <dt style="text-align: left; padding-left: 15px;">Efficient Large Language Model: A General Multi-vision-tasks LLVM</dt>
+  <dd style="text-align: left; padding-left: 10px;">Inspired by the Masked Autoencoder (MAE), we have employed the Masked Autoencoder (MAE) mechanism to fine-tune a pre-trained Efficient Language (LLM). This approach has significantly enhanced our multi-task vision generalist model. The improved model now excels in various tasks, including image denoising, rain removal (deraining), panoptic segmentation, and semantic segmentation, among others</dd>
   <dd style="text-align: left; padding-left: 10px;"><a href="#">[Not Open Sourced]</a></dd>
 </dl>
 
 Model Compression
 ------
-<div style="text-align: center;">
+<!-- <div style="text-align: center;">
+  <img src="../images/prunedResult.png" alt="Image 0" style="width:250px; height:150px; object-fit:cover; margin:10px;" class="zoomable">
+  <img src="../images/testPrune.jpg" alt="Image 1" style="width: 250px; height: 150px; object-fit: cover; margin: 10px;" class="zoomable">
+</div> -->
+<div style="display: flex; justify-content: center; align-items: center;">
   <img src="../images/prunedResult.png" alt="Image 0" style="width:250px; height:150px; object-fit:cover; margin:10px;" class="zoomable">
   <img src="../images/testPrune.jpg" alt="Image 1" style="width: 250px; height: 150px; object-fit: cover; margin: 10px;" class="zoomable">
 </div>
