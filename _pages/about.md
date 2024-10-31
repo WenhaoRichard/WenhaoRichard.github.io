@@ -148,12 +148,12 @@ Model Compression
   <img src="../images/testPrune.jpg" alt="Image 1" style="width: 250px; height: 150px; object-fit: cover; margin: 10px;" class="zoomable">
 </div> -->
 <div style="display: flex; justify-content: center; align-items: center;">
-  <img src="../images/prunedResult.png" alt="Image 0" style="width:250px; height:150px; object-fit:cover; margin:10px;" class="zoomable">
-  <img src="../images/testPrune.jpg" alt="Image 1" style="width: 250px; height: 150px; object-fit: cover; margin: 10px;" class="zoomable">
+  <img src="../images/prunedResult.png" alt="Image 0" style="width:250px; height:150px; object-fit:contain; margin:10px;" class="zoomable">
+  <img src="../images/testPrune.jpg" alt="Image 1" style="width: 250px; height: 150px; object-fit:contain; margin: 10px;" class="zoomable">
 </div>
 <dl>
   <dt style="text-align: left; padding-left: 15px;">Deep Learning Model Compression</dt>
-  <dd style="text-align: left; padding-left: 10px;">In this paper, we experimented with using two tricks for model compression: Pruning and Quantization. By utilizing these methods, we got a remarkable improvement in model simplification while retaining a relatively close accuracy.</dd>
+  <dd style="text-align: left; padding-left: 10px;">In this paper, we experimented with using two methods for model compression: Pruning and Quantization. By utilizing these methods, we got a remarkable improvement in model simplification while retaining a relatively close accuracy.</dd>
 <dd style="text-align: left; padding-left: 10px;"><a href="https://iopscience.iop.org/article/10.1088/1742-6596/2078/1/012047/meta">[Paper]</a>&nbsp;<a href="https://github.com/WenhaoRichard/ModelCompression">[Code]</a></dd>
 </dl>
 
