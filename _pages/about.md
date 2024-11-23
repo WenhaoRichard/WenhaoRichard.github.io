@@ -8,9 +8,9 @@ redirect_from:
   - /about.html
 ---
 **Hao is currently a Machine Learning and Backend Developer at China Merchants Bank Co.,**  
-He graduated with a B.Eng. in Artificial Technology and Science from South China University of Technology (SCUT). In 2021, he earned his M.Sc. degree in Electrical and Computer Engineering from the University of Florida.  During his initial career phase, he applied Computer Vision and Natural Language Processing techniques to analyze health and log data within a mobile app, which boasts over 100 million users.  
-His research interests are focused on Transfer Learning in Computer Vision using Large Language Models, AI for Systems, and the integration of AI with IoT (Internet of Things)."
-He is now working as a research assitant under the supervision of Professor Antonio at University of Purdue.
+He graduated with a B.Eng. in Artificial Technology and Science from South China University of Technology (SCUT). In 2021, he earned his M.Sc. degree in Electrical and Computer Engineering from the University of Florida. He applied Natural Language Processing techniques to analyze health and log data within a mobile app, which boasts over 100 million users.  
+His research interests are focused on model security and robustness in Computer Vision using Large Vision Models, AI for Systems, and the integration of AI with IoT (Internet of Things)."
+He is now working as a research assitant under the supervision of Professor Antonio at Purdue University.
 <dl style="font-family: Arial, sans-serif; font-size: 14px;color: #333; text-align: left; border: 2px solid #3f51b5; padding: 10px; border-radius: 10px;">
   <dt>My Documents</dt>
   <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
@@ -54,10 +54,57 @@ He is now working as a research assitant under the supervision of Professor Anto
 News
 ======
 <ul>
-  <li>[2023/12] As a Machine Learning & Backend Developer, He is actively seeking opportunites as a PhD in AI and its Intersection Domain</li>
+  <li>[2024/10] As a Machine Learning & Backend Developer, he is actively seeking opportunites as a PhD in AI and its Intersection Domain</li>
   <li>[2023/06 - Now] I am doing a research on devise a better multi-vision tasks generalist based on ViTs</li>
   <li>...</li>
 </ul>
+
+Research Projects
+======
+<style>
+    .zoomable {
+      transition: transform 0.2s; /* 动画效果 */
+      object-fit: cover; /* 保持图片比例 */
+      width: 200px;
+      height: 150px;
+      margin: 10px;
+    }
+
+    .zoomable:hover {
+      transform: scale(1.1); /* 放大到原始尺寸的 110% */
+    }
+</style>
+  
+Vision-Language Model research
+------
+
+  <!-- <div style="text-align: center;">
+  <img src="../images/model_arch.png" alt="multiTasker" style="width:250px; height:150px; object-fit:cover; margin:10px;" class="zoomable">
+</div> -->
+<div style="text-align: center;">
+  <img src="../images/design.png" alt="multiTasker" style="width:auto; height:auto; max-width:100%; max-height:300px; object-fit:contain; margin:10px;" class="zoomable">
+</div>
+<dl>
+  <dt style="text-align: left; padding-left: 15px;">Efficient In-context Visual Learning</dt>
+  <dd style="text-align: left; padding-left: 10px;">Inspired by the MAE-VQGAN, we have an efficient architectural design: Efficient Painter to finetune a pre-trained Efficient backbone for visual in-context learning. This approach has significantly enhanced our efficient multi-tasking vision generalist model. Our model strikes a balance between speed and accuracy. The improved model now excels SOTA in various low-level tasks, including image denoising, rain removal (deraining) while maintains a relatively high throughput during inference.</dd>
+  <dd style="text-align: left; padding-left: 10px;"><a href="#">[Not Open Sourced]</a></dd>
+</dl>
+
+Model Compression
+------
+<!-- <div style="text-align: center;">
+  <img src="../images/prunedResult.png" alt="Image 0" style="width:250px; height:150px; object-fit:cover; margin:10px;" class="zoomable">
+  <img src="../images/testPrune.jpg" alt="Image 1" style="width: 250px; height: 150px; object-fit: cover; margin: 10px;" class="zoomable">
+</div> -->
+<div style="display: flex; justify-content: center; align-items: center;">
+  <img src="../images/prunedResult.png" alt="Image 0" style="width:250px; height:150px; object-fit:contain; margin:10px;" class="zoomable">
+  <img src="../images/testPrune.jpg" alt="Image 1" style="width: 250px; height: 150px; object-fit:contain; margin: 10px;" class="zoomable">
+</div>
+<dl>
+  <dt style="text-align: left; padding-left: 15px;">Deep Learning Model Compression</dt>
+  <dd style="text-align: left; padding-left: 10px;">In this paper, we experimented with using two methods for model compression: Pruning and Quantization. By utilizing these methods, we got a remarkable improvement in model simplification while retaining a relatively close accuracy.</dd>
+<dd style="text-align: left; padding-left: 10px;"><a href="https://iopscience.iop.org/article/10.1088/1742-6596/2078/1/012047/meta">[Paper]</a>&nbsp;<a href="https://github.com/WenhaoRichard/ModelCompression">[Code]</a></dd>
+</dl>
 
 
 Education
@@ -110,50 +157,5 @@ Experience
 
 <br/>
 
-Research Projects
-======
-<style>
-    .zoomable {
-      transition: transform 0.2s; /* 动画效果 */
-      object-fit: cover; /* 保持图片比例 */
-      width: 200px;
-      height: 150px;
-      margin: 10px;
-    }
 
-    .zoomable:hover {
-      transform: scale(1.1); /* 放大到原始尺寸的 110% */
-    }
-</style>
-  
-Vision-Language Model research
-------
-
-  <!-- <div style="text-align: center;">
-  <img src="../images/model_arch.png" alt="multiTasker" style="width:250px; height:150px; object-fit:cover; margin:10px;" class="zoomable">
-</div> -->
-<div style="text-align: center;">
-  <img src="../images/model_arch.png" alt="multiTasker" style="width:auto; height:auto; max-width:100%; max-height:300px; object-fit:contain; margin:10px;" class="zoomable">
-</div>
-<dl>
-  <dt style="text-align: left; padding-left: 15px;">Efficient Large Language Model: A General Multi-vision-tasks LLVM</dt>
-  <dd style="text-align: left; padding-left: 10px;">Inspired by the Masked Autoencoder (MAE), we have employed the Masked Autoencoder (MAE) mechanism to fine-tune a pre-trained Efficient Language (LLM). This approach has significantly enhanced our multi-task vision generalist model. The improved model now excels in various tasks, including image denoising, rain removal (deraining), panoptic segmentation, and semantic segmentation, among others</dd>
-  <dd style="text-align: left; padding-left: 10px;"><a href="#">[Not Open Sourced]</a></dd>
-</dl>
-
-Model Compression
-------
-<!-- <div style="text-align: center;">
-  <img src="../images/prunedResult.png" alt="Image 0" style="width:250px; height:150px; object-fit:cover; margin:10px;" class="zoomable">
-  <img src="../images/testPrune.jpg" alt="Image 1" style="width: 250px; height: 150px; object-fit: cover; margin: 10px;" class="zoomable">
-</div> -->
-<div style="display: flex; justify-content: center; align-items: center;">
-  <img src="../images/prunedResult.png" alt="Image 0" style="width:250px; height:150px; object-fit:contain; margin:10px;" class="zoomable">
-  <img src="../images/testPrune.jpg" alt="Image 1" style="width: 250px; height: 150px; object-fit:contain; margin: 10px;" class="zoomable">
-</div>
-<dl>
-  <dt style="text-align: left; padding-left: 15px;">Deep Learning Model Compression</dt>
-  <dd style="text-align: left; padding-left: 10px;">In this paper, we experimented with using two methods for model compression: Pruning and Quantization. By utilizing these methods, we got a remarkable improvement in model simplification while retaining a relatively close accuracy.</dd>
-<dd style="text-align: left; padding-left: 10px;"><a href="https://iopscience.iop.org/article/10.1088/1742-6596/2078/1/012047/meta">[Paper]</a>&nbsp;<a href="https://github.com/WenhaoRichard/ModelCompression">[Code]</a></dd>
-</dl>
 
