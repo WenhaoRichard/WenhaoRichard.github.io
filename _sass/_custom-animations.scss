@@ -1,0 +1,16 @@
+.scroll-scale-container {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.scroll-scale-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  will-change: transform; /* 性能优化 */
+  transition: transform 0.1s ease-out; /* 让缩放更平滑 */
+}
