@@ -8,45 +8,50 @@ redirect_from:
   - /about.html
 ---
 
-<div style="height: 200vh;"> <!-- 创建一个父容器来提供滚动空间 -->
-  <div class="scroll-scale-container">
-    <div class="scroll-scale-content">
+---
+permalink: /
+title: "About me"
+excerpt: ""
+author_profile: true
+redirect_from: 
+  - /about/
+  - /about.html
+---
 
-      <!-- 在这里放置您想缩放的内容 -->
-      <div>
-        **Hao is currently a Machine Learning and Backend Developer at China Merchants Bank Co.,**  
-        He graduated with a B.Eng. in Artificial Technology and Science from South China University of Technology (SCUT). In 2021, he earned his M.Sc. degree in Electrical and Computer Engineering from the University of Florida. He applied Natural Language Processing techniques to analyze health and log data within a mobile app, which boasts over 100 million users.  
-        His research interests are focused on model security and robustness in Computer Vision using Large Vision Models, AI for Systems, and the integration of AI with IoT (Internet of Things)."
-        He is now working as a research assitant under the supervision of Professor Antonio at Purdue University.
-      </div>
-
+<div class="scroll-scale-container" style="height: 100vh;">
+  <div class="scroll-scale-content">
+    <!-- 在这里放置您想缩放的内容 -->
+    <div style="text-align: center; max-width: 800px; padding: 2rem;">
+      **Hao is currently a Machine Learning and Backend Developer at China Merchants Bank Co.,**  
+      He graduated with a B.Eng. in Artificial Technology and Science from South China University of Technology (SCUT). In 2021, he earned his M.Sc. degree in Electrical and Computer Engineering from the University of Florida. He applied Natural Language Processing techniques to analyze health and log data within a mobile app, which boasts over 100 million users.  
+      His research interests are focused on model security and robustness in Computer Vision using Large Vision Models, AI for Systems, and the integration of AI with IoT (Internet of Things)."
+      He is now working as a research assitant under the supervision of Professor Antonio at Purdue University.
     </div>
   </div>
 </div>
 
-<div style="padding: 2rem;">
-  <dl style="font-family: Arial, sans-serif; font-size: 14px;color: #333; text-align: left; border: 2px solid #3f51b5; padding: 10px; border-radius: 10px;">
-    <dt>My Documents</dt>
-    <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
-      <a href="./files/CV_research.pdf" style="color: black; text-decoration: none;">CV</a>
-    </dd>
-    <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
-      <a href="./files/transcript_graduate.pdf" style="color: black; text-decoration: none;">Transcript (Graduate)</a>
-      <a href="./files/Diploma.pdf" style="color: black; text-decoration: none;">Certificate (Graduate)</a>
-    </dd>
-    <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
-      <a href="./files/Transcript_Undergraduate.pdf" style="color: black; text-decoration: none;">Transcript(Undergraduate)</a>
-      <a href="./files/undergraduateTranscript.pdf" style="color: black; text-decoration: none;">Certificate (Undergraduate)</a>
-    </dd>
-    <!-- <dt>Tools</dt>
-    <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
-      <a href="../time_diff.html" style="color: black; text-decoration: none;">Time Difference Between China and US</a>
-    </dd>
-    <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
-      <a href="../test.html" style="color: black; text-decoration: none;">My Calendar</a>
-    </dd> -->
+<div id="page-content" style="padding-top: 2rem;">
+  {% include about/news.html %}
+  {% include about/research.html %}
+  {% include about/experience.html %}
+  {% include about/education.html %}
 
-  </dl>
+  <div style="padding: 2rem;">
+    <dl style="font-family: Arial, sans-serif; font-size: 14px;color: #333; text-align: left; border: 2px solid #3f51b5; padding: 10px; border-radius: 10px;">
+      <dt>My Documents</dt>
+      <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
+        <a href="./files/CV_research.pdf" style="color: black; text-decoration: none;">CV</a>
+      </dd>
+      <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
+        <a href="./files/transcript_graduate.pdf" style="color: black; text-decoration: none;">Transcript (Graduate)</a>
+        <a href="./files/Diploma.pdf" style="color: black; text-decoration: none;">Certificate (Graduate)</a>
+      </dd>
+      <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
+        <a href="./files/Transcript_Undergraduate.pdf" style="color: black; text-decoration: none;">Transcript(Undergraduate)</a>
+        <a href="./files/undergraduateTranscript.pdf" style="color: black; text-decoration: none;">Certificate (Undergraduate)</a>
+      </dd>
+    </dl>
+  </div>
 
   <script>
     const links = document.querySelectorAll(".link");
@@ -64,112 +69,5 @@ redirect_from:
       });
     });
   </script>
-
-  News
-  ======
-  <ul>
-    <li>[2024/10] As a Machine Learning & Backend Developer, he is actively seeking opportunites as a PhD in AI and its Intersection Domain</li>
-    <li>[2023/06 - Now] I am doing a research on devise a better multi-vision tasks generalist based on ViTs</li>
-    <li>...</li>
-  </ul>
-
-  Research Projects
-  ======
-  <style>
-      .zoomable {
-        transition: transform 0.2s; /* 动画效果 */
-        object-fit: cover; /* 保持图片比例 */
-        width: 200px;
-        height: 150px;
-        margin: 10px;
-      }
-
-      .zoomable:hover {
-        transform: scale(1.1); /* 放大到原始尺寸的 110% */
-      }
-  </style>
-    
-  Vision-Language Model research
-  ------
-
-    <!-- <div style="text-align: center;">
-    <img src="../images/model_arch.png" alt="multiTasker" style="width:250px; height:150px; object-fit:cover; margin:10px;" class="zoomable">
-  </div> -->
-  <div style="text-align: center;">
-    <img src="../images/design.png" alt="multiTasker" style="width:auto; height:auto; max-width:100%; max-height:300px; object-fit:contain; margin:10px;" class="zoomable">
-  </div>
-  <dl>
-    <dt style="text-align: left; padding-left: 15px;">Efficient In-context Visual Learning</dt>
-    <dd style="text-align: left; padding-left: 10px;">Inspired by the MAE-VQGAN, we have an efficient architectural design: Efficient Painter to finetune a pre-trained Efficient backbone for visual in-context learning. This approach has significantly enhanced our efficient multi-tasking vision generalist model. Our model strikes a balance between speed and accuracy. The improved model now excels SOTA in various low-level tasks, including image denoising, rain removal (deraining) while maintains a relatively high throughput during inference.</dd>
-    <dd style="text-align: left; padding-left: 10px;"><a href="#">[Not Open Sourced]</a></dd>
-  </dl>
-
-  Model Compression
-  ------
-  <!-- <div style="text-align: center;">
-    <img src="../images/prunedResult.png" alt="Image 0" style="width:250px; height:150px; object-fit:cover; margin:10px;" class="zoomable">
-    <img src="../images/testPrune.jpg" alt="Image 1" style="width: 250px; height: 150px; object-fit: cover; margin: 10px;" class="zoomable">
-  </div> -->
-  <div style="display: flex; justify-content: center; align-items: center;">
-    <img src="../images/prunedResult.png" alt="Image 0" style="width:250px; height:150px; object-fit:contain; margin:10px;" class="zoomable">
-    <img src="../images/testPrune.jpg" alt="Image 1" style="width: 250px; height: 150px; object-fit:contain; margin: 10px;" class="zoomable">
-  </div>
-  <dl>
-    <dt style="text-align: left; padding-left: 15px;">Deep Learning Model Compression</dt>
-    <dd style="text-align: left; padding-left: 10px;">In this paper, we experimented with using two methods for model compression: Pruning and Quantization. By utilizing these methods, we got a remarkable improvement in model simplification while retaining a relatively close accuracy.</dd>
-  <dd style="text-align: left; padding-left: 10px;"><a href="https://iopscience.iop.org/article/10.1088/1742-6596/2078/1/012047/meta">[Paper]</a>&nbsp;<a href="https://github.com/WenhaoRichard/ModelCompression">[Code]</a></dd>
-  </dl>
-
-
-  Education
-  ======
-
-  <dl>
-  <dt>
-    <img src="../images/ufl.png" width="100" height="110" alt="ufl" align="left">
-  </dt>
-  <dt>&nbsp;University of Florida</dt>
-    <dd>&nbsp;August 2019 - December 2021</dd>
-    <dd>&nbsp;M.Sc., Electrical and Computer Engineering (Major)</dd>
-  </dl>
-
-  <dl>
-  <dt>
-    <img src="../images/scut.jpeg" width="100" height="110" alt="scut" align="left">
-  </dt>
-  <dt>&nbsp;South China University of Technology</dt>
-    <dd>&nbsp;August 2015 - July 2019</dd>
-    <dd>&nbsp;B.Eng., Intelligent Science and Technology</dd>
-  </dl>
-
-  <br/>
-
-
-  Experience
-  ======
-  <dl>
-    <dt>
-      <img src="../images/cmbchina.jpeg" width="100" height="110" alt="cmbchina" align="left">
-    </dt>
-    <dt style="text-align: left; padding-left: 10px;">&nbsp;  IT Department, China Merchants Bank (CMB) Co. Ltd.</dt>
-    <dd style="text-align: left; padding-left: 10px;">&nbsp;  06/2022 - Now</dd>
-    <dd style="text-align: left; padding-left: 10px;">&nbsp;  Machine Learning & Backend Engineer (Full Time)</dd>
-    <dd style="text-align: left; padding-left: 10px;">&nbsp;  Focus: Application of Large Language Model (LLM) on System Availability and Reliability.</dd>
-  </dl>
-
-
-  <dl>
-  <dt>
-    <img src="../images/ICT.jpg" width="100" height="110" alt="ICT" align="left">
-  </dt>
-  <dt style="text-align: left; padding-left: 10px;">&nbsp;  Institute of Computing, Chinese Academy of Sciences</dt>
-  <dd style="text-align: left; padding-left: 10px;">&nbsp;  12/2020 - 03/2021</dd>
-  <dd style="text-align: left; padding-left: 10px;">&nbsp;  Research Assistant (Part Time)</dd>
-  <dd style="text-align: left; padding-left: 10px;">&nbsp;  Focus: Deep learning model compression.</dd>
-  </dl>
-
-
-  <br/>
 </div>
-
 
