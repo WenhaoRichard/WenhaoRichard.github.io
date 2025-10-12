@@ -8,6 +8,16 @@ redirect_from:
   - /about.html
 ---
 
+---
+permalink: /
+title: "About me"
+excerpt: ""
+author_profile: true
+redirect_from: 
+  - /about/
+  - /about.html
+---
+
 <div class="scroll-scale-container" style="height: 100vh;">
   <div class="scroll-scale-content">
     <!-- 在这里放置您想缩放的内容 -->
