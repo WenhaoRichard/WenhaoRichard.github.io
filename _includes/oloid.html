@@ -1,439 +1,252 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Oloid</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=JetBrains+Mono:wght@300;400&display=swap');
+  :root {
+    --bg: #020305;
+    --bg-glow: #0a1024;
+    --line-a: #62d0ff;
+    --line-b: #b985ff;
+    --line-c: #63ffa5;
+    --text: #e9ecf8;
+    --subtle: #aeb6cf;
+    --btn-a: #4b5cff;
+    --btn-b: #8a43ff;
+  }
 
-*  { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  .entry-stage {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: grid;
+    place-items: center;
+    background:
+      radial-gradient(circle at 50% 30%, rgba(14, 24, 58, 0.45) 0%, transparent 45%),
+      radial-gradient(circle at 50% 50%, var(--bg-glow) 0%, var(--bg) 72%);
+    color: var(--text);
+    transition: opacity .55s ease, visibility .55s ease;
+  }
 
-html, body {
-  background: #0c1014;
-  color: #e8e4d8;
-  font-family: 'Fraunces', serif;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  user-select: none;
-  -webkit-user-select: none;
-}
+  .entry-stage.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
 
-#canvas {
-  display: block;
-  width: 100vw;
-  height: 100vh;
-  touch-action: none;
-  cursor: grab;
-}
-#canvas:active { cursor: grabbing; }
+  .stage-wrap { width: min(94vw, 980px); text-align: center; }
 
-.overlay { position: absolute; pointer-events: none; z-index: 10; }
+  #oloid-canvas {
+    width: min(90vw, 900px);
+    height: min(62vh, 560px);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,.12);
+    background: #000;
+    box-shadow: 0 30px 80px rgba(0,0,0,.55), inset 0 0 80px rgba(98,208,255,.08);
+    cursor: grab;
+    touch-action: none;
+  }
 
-.header { top: 24px; left: 24px; }
-.title {
-  font-size: 34px;
-  font-weight: 300;
-  letter-spacing: 0.01em;
-  font-style: italic;
-  line-height: 1;
-}
-.subtitle {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px;
-  font-weight: 300;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  opacity: 0.45;
-  margin-top: 10px;
-}
+  #oloid-canvas.dragging { cursor: grabbing; }
 
-.legend {
-  position: absolute;
-  top: 28px;
-  right: 24px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  opacity: 0.75;
-  text-align: right;
-  z-index: 10;
-  pointer-events: none;
-}
-.legend-item {
-  display: flex; align-items: center; justify-content: flex-end;
-  gap: 8px; margin-bottom: 6px;
-}
-.dot { width: 7px; height: 7px; border-radius: 50%; }
+  .stage-name {
+    margin: .95rem 0 .2rem;
+    font-size: clamp(1.35rem, 2.8vw, 2.2rem);
+    letter-spacing: .2em;
+    font-weight: 700;
+  }
 
-.formula {
-  position: absolute;
-  left: 24px;
-  bottom: 110px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px;
-  opacity: 0.38;
-  letter-spacing: 0.04em;
-  line-height: 1.7;
-  pointer-events: none;
-  z-index: 10;
-}
-.formula .accent { color: #d4b896; opacity: 1; }
+  .stage-sub { margin: 0 0 1rem; color: var(--subtle); }
 
-.footer {
-  bottom: 22px;
-  left: 24px;
-  right: 24px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 9px;
-  font-weight: 300;
-  letter-spacing: 0.18em;
-  opacity: 0.35;
-  display: flex;
-  justify-content: space-between;
-  text-transform: uppercase;
-}
+  .enter-btn {
+    border: 1px solid rgba(138,67,255,.65);
+    border-radius: 999px;
+    padding: .72rem 1.45rem;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg, var(--btn-a), var(--btn-b));
+    cursor: pointer;
+  }
 
-.controls {
-  position: absolute;
-  bottom: 56px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 4px;
-  z-index: 20;
-}
-.btn {
-  background: rgba(232, 228, 216, 0.04);
-  border: 1px solid rgba(232, 228, 216, 0.12);
-  color: #e8e4d8;
-  padding: 9px 16px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px;
-  font-weight: 400;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  cursor: pointer;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  transition: all 0.25s ease;
-  pointer-events: auto;
-  border-radius: 0;
-}
-.btn:hover, .btn.active {
-  background: rgba(232, 228, 216, 0.13);
-  border-color: rgba(232, 228, 216, 0.32);
-}
+  .page-shell { opacity: 0; transform: translateY(16px); transition: all .6s ease; }
+  .page-shell.ready { opacity: 1; transform: translateY(0); }
 
-.corner {
-  position: absolute;
-  width: 14px; height: 14px;
-  border-color: rgba(232, 228, 216, 0.25);
-  border-style: solid;
-  border-width: 0;
-  z-index: 5;
-  pointer-events: none;
-}
-.c-tl { top: 14px; left: 14px; border-top-width: 1px; border-left-width: 1px; }
-.c-tr { top: 14px; right: 14px; border-top-width: 1px; border-right-width: 1px; }
-.c-bl { bottom: 14px; left: 14px; border-bottom-width: 1px; border-left-width: 1px; }
-.c-br { bottom: 14px; right: 14px; border-bottom-width: 1px; border-right-width: 1px; }
+  .hero-panel {
+    margin-bottom: 1.3rem;
+    padding: 1.65rem;
+    border-radius: 18px;
+    color: #fff;
+    background: linear-gradient(145deg, #11182f 0%, #223a8a 48%, #412a8f 100%);
+  }
 
-@media (max-width: 600px) {
-  .title { font-size: 28px; }
-  .formula { display: none; }
-  .legend { font-size: 9px; top: 26px; right: 18px; }
-  .header { left: 18px; top: 22px; }
-  .footer { font-size: 8px; left: 18px; right: 18px; }
-}
+  .core-zone {
+    border: 1px solid #e8edf8;
+    background: #fcfdff;
+    border-radius: 16px;
+    padding: 1.08rem;
+    margin-bottom: 1.12rem;
+  }
+
+  .project-banner {
+    width: 100%;
+    max-height: 280px;
+    object-fit: contain;
+    border-radius: 12px;
+    background: #f4f6fb;
+    padding: .35rem;
+  }
+
+  .mini-stats {
+    margin-top: .75rem;
+    text-align: right;
+    font-size: .68rem;
+    opacity: .55;
+    color: #d8def3;
+  }
+
+  .mini-stats span + span { margin-left: .45rem; }
 </style>
-</head>
-<body>
-<canvas id="canvas"></canvas>
 
-<div class="corner c-tl"></div>
-<div class="corner c-tr"></div>
-<div class="corner c-bl"></div>
-<div class="corner c-br"></div>
-
-<div class="overlay header">
-  <div class="title">oloid</div>
-  <div class="subtitle">Paul Schatz · 1929</div>
+<div class="entry-stage" id="entry-stage" aria-label="Draggable Oloid entry stage">
+  <div class="stage-wrap">
+    <canvas id="oloid-canvas" width="1100" height="700"></canvas>
+    <h1 class="stage-name">RichardWWHH</h1>
+    <p class="stage-sub">Oloid geometry · drag to rotate view</p>
+    <button class="enter-btn" id="enter-home">进入个人主页</button>
+  </div>
 </div>
 
-<div class="legend">
-  <div class="legend-item"><span>circle&nbsp;A</span><span class="dot" style="background:#ff6b4a"></span></div>
-  <div class="legend-item"><span>circle&nbsp;B</span><span class="dot" style="background:#5ba3ff"></span></div>
-</div>
-
-<div class="formula">
-  convex hull of two<br>
-  perpendicular unit circles<br>
-  <span class="accent">·</span>&nbsp;distance(centers) = radius<br>
-  <span class="accent">·</span>&nbsp;every ruling has length √3
-</div>
-
-<div class="controls">
-  <button class="btn active" id="btn-surface">surface</button>
-  <button class="btn" id="btn-rulings">rulings</button>
-  <button class="btn active" id="btn-rotate">auto</button>
-</div>
-
-<div class="overlay footer">
-  <span>drag to rotate</span>
-  <span>developable ruled surface</span>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <script>
-const canvas = document.getElementById('canvas');
+(function () {
+  const canvas = document.getElementById('oloid-canvas');
+  const ctx = canvas.getContext('2d');
+  const stage = document.getElementById('entry-stage');
+  const shell = document.getElementById('page-shell');
+  const btn = document.getElementById('enter-home');
 
-const scene = new THREE.Scene();
-scene.background = new THREE.Color(0x0c1014);
-scene.fog = new THREE.Fog(0x0c1014, 7, 15);
+  const state = { ax: -0.5, ay: 0.84, dragging: false, lx: 0, ly: 0, spin: 0.0035 };
 
-const camera = new THREE.PerspectiveCamera(34, window.innerWidth / window.innerHeight, 0.1, 100);
-camera.position.set(3.6, 2.6, 4.5);
-camera.lookAt(0, 0, 0);
-
-const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
-renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-renderer.shadowMap.enabled = true;
-renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-renderer.outputEncoding = THREE.sRGBEncoding;
-
-/* --- Oloid math ---------------------------------------------------------
-   Circle A: in xz-plane, center (-1/2, 0, 0), radius 1
-   Circle B: in xy-plane, center (+1/2, 0, 0), radius 1
-   For a line A(α)→B(β) to lie on the convex-hull surface:
-       cos β = cos α / (1 − cos α)
-   which is real for α ∈ [π/3, 5π/3] (a 240° arc of A).
-   All rulings then have length √3.                                       */
-
-function generateOloid(N) {
-  const positions = [];
-  const indices = [];
-  const aMin = Math.PI / 3;
-  const aMax = 5 * Math.PI / 3;
-
-  function buildSheet(yFlip) {
-    const start = positions.length / 3;
-    for (let i = 0; i <= N; i++) {
-      const alpha = aMin + (i / N) * (aMax - aMin);
-      const cA = Math.cos(alpha);
-      const sA = Math.sin(alpha);
-      // A point
-      positions.push(-0.5 + cA, 0, sA);
-      // B point
-      let cB = cA / (1 - cA);
-      cB = Math.max(-1, Math.min(1, cB));
-      const sB = Math.sqrt(Math.max(0, 1 - cB * cB));
-      positions.push(0.5 + cB, yFlip * sB, 0);
+  function circle(radius, center, normal, count) {
+    const pts = [];
+    const [cx, cy, cz] = center;
+    let u = [1, 0, 0], v = [0, 1, 0];
+    if (normal[0] === 1) { u = [0,1,0]; v = [0,0,1]; }
+    if (normal[1] === 1) { u = [1,0,0]; v = [0,0,1]; }
+    if (normal[2] === 1) { u = [1,0,0]; v = [0,1,0]; }
+    for (let i = 0; i < count; i += 1) {
+      const t = (i / count) * Math.PI * 2;
+      pts.push([
+        cx + radius * (Math.cos(t) * u[0] + Math.sin(t) * v[0]),
+        cy + radius * (Math.cos(t) * u[1] + Math.sin(t) * v[1]),
+        cz + radius * (Math.cos(t) * u[2] + Math.sin(t) * v[2])
+      ]);
     }
-    for (let i = 0; i < N; i++) {
-      const a0 = start + i * 2;
-      const b0 = a0 + 1;
-      const a1 = a0 + 2;
-      const b1 = a0 + 3;
-      if (yFlip > 0) {
-        indices.push(a0, a1, b1, a0, b1, b0);
-      } else {
-        indices.push(a0, b1, a1, a0, b0, b1);
-      }
-    }
+    return pts;
   }
-  buildSheet(1);   // top sheet (y ≥ 0)
-  buildSheet(-1);  // bottom sheet (y ≤ 0)
 
-  const g = new THREE.BufferGeometry();
-  g.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
-  g.setIndex(indices);
-  g.computeVertexNormals();
-  return g;
-}
+  const r = 1;
+  const c1 = circle(r, [0.5, 0, 0], [0, 0, 1], 220);
+  const c2 = circle(r, [-0.5, 0, 0], [1, 0, 0], 220);
 
-const oloidGeo = generateOloid(200);
+  function rot(p) {
+    const [x0, y0, z0] = p;
+    const cx = Math.cos(state.ax), sx = Math.sin(state.ax);
+    const cy = Math.cos(state.ay), sy = Math.sin(state.ay);
+    const y1 = y0 * cx - z0 * sx;
+    const z1 = y0 * sx + z0 * cx;
+    const x2 = x0 * cy + z1 * sy;
+    const z2 = -x0 * sy + z1 * cy;
+    return [x2, y1, z2];
+  }
 
-const oloidMat = new THREE.MeshStandardMaterial({
-  color: 0xd4b896,
-  metalness: 0.12,
-  roughness: 0.42,
-  side: THREE.DoubleSide,
-  flatShading: false
-});
-const oloid = new THREE.Mesh(oloidGeo, oloidMat);
-oloid.castShadow = true;
-oloid.receiveShadow = true;
+  function proj(p) {
+    const [x, y, z] = p;
+    const k = 210 / (z + 5.7);
+    return [canvas.width / 2 + x * k * 130, canvas.height / 2 + y * k * 130];
+  }
 
-/* --- Rulings (line view) ----------------------------------------------- */
-function generateRulings(N) {
-  const pos = [];
-  const aMin = Math.PI / 3;
-  const aMax = 5 * Math.PI / 3;
-  for (const sign of [1, -1]) {
-    for (let i = 0; i <= N; i++) {
-      const alpha = aMin + (i / N) * (aMax - aMin);
-      const cA = Math.cos(alpha);
-      const sA = Math.sin(alpha);
-      let cB = cA / (1 - cA);
-      cB = Math.max(-1, Math.min(1, cB));
-      const sB = Math.sqrt(Math.max(0, 1 - cB * cB));
-      pos.push(-0.5 + cA, 0, sA);
-      pos.push(0.5 + cB, sign * sB, 0);
+  function drawCurve(points, color, width, glow) {
+    ctx.beginPath();
+    points.forEach((p, i) => {
+      const q = proj(rot(p));
+      if (i === 0) ctx.moveTo(q[0], q[1]); else ctx.lineTo(q[0], q[1]);
+    });
+    ctx.closePath();
+    ctx.strokeStyle = color;
+    ctx.lineWidth = width;
+    ctx.shadowColor = color;
+    ctx.shadowBlur = glow;
+    ctx.stroke();
+    ctx.shadowBlur = 0;
+  }
+
+  function drawGenerators() {
+    ctx.strokeStyle = 'rgba(99,255,165,.5)';
+    ctx.lineWidth = 1.2;
+    for (let i = 0; i < 36; i += 1) {
+      const t = (i / 36) * Math.PI * 2;
+      const p1 = [0.5 + Math.cos(t), Math.sin(t), 0];
+      const p2 = [-0.5, Math.cos(t), Math.sin(t)];
+      const a = proj(rot(p1));
+      const b = proj(rot(p2));
+      ctx.beginPath();
+      ctx.moveTo(a[0], a[1]);
+      ctx.lineTo(b[0], b[1]);
+      ctx.stroke();
     }
   }
-  const g = new THREE.BufferGeometry();
-  g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
-  return g;
-}
-const rulingsGeo = generateRulings(56);
-const rulingsMat = new THREE.LineBasicMaterial({
-  color: 0xd4b896, transparent: true, opacity: 0.55
-});
-const rulings = new THREE.LineSegments(rulingsGeo, rulingsMat);
-rulings.visible = false;
 
-/* --- Defining circles (with see-through ghost) ------------------------- */
-function buildCircle(center, ax1, ax2, color) {
-  const segs = 256;
-  const pts = [];
-  for (let i = 0; i <= segs; i++) {
-    const th = (i / segs) * Math.PI * 2;
-    const c = Math.cos(th), s = Math.sin(th);
-    pts.push(new THREE.Vector3(
-      center[0] + c * ax1[0] + s * ax2[0],
-      center[1] + c * ax1[1] + s * ax2[1],
-      center[2] + c * ax1[2] + s * ax2[2]
-    ));
+
+  function drawEnvelopeSurface() {
+    for (let i = 0; i < 56; i += 1) {
+      const t = (i / 56) * Math.PI * 2;
+      const p1 = [0.5 + Math.cos(t), Math.sin(t), 0];
+      const p2 = [-0.5, Math.cos(t), Math.sin(t)];
+      const a = proj(rot(p1));
+      const b = proj(rot(p2));
+      const alpha = 0.08 + 0.06 * Math.sin(t * 2);
+      ctx.strokeStyle = `rgba(120, 190, 255, ${alpha.toFixed(3)})`;
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      ctx.moveTo(a[0], a[1]);
+      ctx.lineTo(b[0], b[1]);
+      ctx.stroke();
+    }
   }
-  const geom = new THREE.BufferGeometry().setFromPoints(pts);
-  const front = new THREE.Line(geom, new THREE.LineBasicMaterial({
-    color, transparent: true, opacity: 0.95
-  }));
-  front.renderOrder = 1;
-  const ghost = new THREE.Line(geom, new THREE.LineBasicMaterial({
-    color, transparent: true, opacity: 0.18, depthTest: false
-  }));
-  ghost.renderOrder = 2;
-  return [front, ghost];
-}
-const circleA = buildCircle([-0.5, 0, 0], [1, 0, 0], [0, 0, 1], 0xff6b4a);
-const circleB = buildCircle([ 0.5, 0, 0], [1, 0, 0], [0, 1, 0], 0x5ba3ff);
 
-/* --- Group everything --------------------------------------------------- */
-const group = new THREE.Group();
-group.add(oloid);
-group.add(rulings);
-circleA.forEach(l => group.add(l));
-circleB.forEach(l => group.add(l));
-scene.add(group);
+  function stars() {
+    ctx.fillStyle = 'rgba(255,255,255,.68)';
+    for (let i = 0; i < 95; i += 1) {
+      const x = (i * 97 + 17) % canvas.width;
+      const y = (i * 53 + 19) % canvas.height;
+      ctx.fillRect(x, y, 1.3, 1.3);
+    }
+  }
 
-/* --- Lighting ----------------------------------------------------------- */
-scene.add(new THREE.AmbientLight(0x4a5566, 0.55));
+  function loop() {
+    if (!state.dragging) state.ay += state.spin;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    stars();
+    drawGenerators();
+    drawEnvelopeSurface();
+    drawCurve(c1, '#62d0ff', 2.2, 14);
+    drawCurve(c2, '#b985ff', 2.2, 14);
+    requestAnimationFrame(loop);
+  }
 
-const keyLight = new THREE.DirectionalLight(0xfff0d6, 1.35);
-keyLight.position.set(4.5, 6, 3);
-keyLight.castShadow = true;
-keyLight.shadow.mapSize.set(2048, 2048);
-keyLight.shadow.camera.near = 0.5;
-keyLight.shadow.camera.far = 22;
-keyLight.shadow.camera.left = -4;
-keyLight.shadow.camera.right = 4;
-keyLight.shadow.camera.top = 4;
-keyLight.shadow.camera.bottom = -4;
-keyLight.shadow.bias = -0.0005;
-scene.add(keyLight);
+  function start(x, y) { state.dragging = true; state.lx = x; state.ly = y; canvas.classList.add('dragging'); }
+  function move(x, y) {
+    if (!state.dragging) return;
+    const dx = x - state.lx;
+    const dy = y - state.ly;
+    state.lx = x; state.ly = y;
+    state.ay += dx * 0.007;
+    state.ax += dy * 0.007;
+  }
+  function end() { state.dragging = false; canvas.classList.remove('dragging'); }
 
-const rimLight = new THREE.DirectionalLight(0x6a9aff, 0.55);
-rimLight.position.set(-4, 2.5, -3.5);
-scene.add(rimLight);
+  canvas.addEventListener('mousedown', (e) => start(e.clientX, e.clientY));
+  window.addEventListener('mousemove', (e) => move(e.clientX, e.clientY));
+  window.addEventListener('mouseup', end);
+  canvas.addEventListener('touchstart', (e) => { const t = e.touches[0]; start(t.clientX, t.clientY); }, { passive: true });
+  window.addEventListener('touchmove', (e) => { const t = e.touches[0]; if (t) move(t.clientX, t.clientY); }, { passive: true });
+  window.addEventListener('touchend', end, { passive: true });
 
-const fillLight = new THREE.DirectionalLight(0xff8b66, 0.22);
-fillLight.position.set(2, -3, 2);
-scene.add(fillLight);
+  btn.addEventListener('click', function () { stage.classList.add('hidden'); shell.classList.add('ready'); });
 
-// Ground for shadow
-const ground = new THREE.Mesh(
-  new THREE.PlaneGeometry(40, 40),
-  new THREE.ShadowMaterial({ opacity: 0.32 })
-);
-ground.rotation.x = -Math.PI / 2;
-ground.position.y = -1.55;
-ground.receiveShadow = true;
-scene.add(ground);
-
-/* --- Interaction -------------------------------------------------------- */
-let rotX = 0.28, rotY = 0.55;
-let targetX = rotX, targetY = rotY;
-let dragging = false;
-let lastX = 0, lastY = 0;
-let autoRotate = true;
-
-canvas.addEventListener('pointerdown', e => {
-  dragging = true;
-  lastX = e.clientX;
-  lastY = e.clientY;
-  try { canvas.setPointerCapture(e.pointerId); } catch (_) {}
-});
-canvas.addEventListener('pointermove', e => {
-  if (!dragging) return;
-  const dx = e.clientX - lastX;
-  const dy = e.clientY - lastY;
-  targetY += dx * 0.008;
-  targetX += dy * 0.008;
-  targetX = Math.max(-Math.PI / 2 + 0.15, Math.min(Math.PI / 2 - 0.15, targetX));
-  lastX = e.clientX;
-  lastY = e.clientY;
-});
-function endDrag(e) {
-  dragging = false;
-  try { canvas.releasePointerCapture(e.pointerId); } catch (_) {}
-}
-canvas.addEventListener('pointerup', endDrag);
-canvas.addEventListener('pointercancel', endDrag);
-canvas.addEventListener('pointerleave', endDrag);
-
-/* --- UI ----------------------------------------------------------------- */
-const btnSurface = document.getElementById('btn-surface');
-const btnRulings = document.getElementById('btn-rulings');
-const btnRotate  = document.getElementById('btn-rotate');
-
-btnSurface.addEventListener('click', () => {
-  oloid.visible = true;
-  rulings.visible = false;
-  btnSurface.classList.add('active');
-  btnRulings.classList.remove('active');
-});
-btnRulings.addEventListener('click', () => {
-  oloid.visible = false;
-  rulings.visible = true;
-  btnSurface.classList.remove('active');
-  btnRulings.classList.add('active');
-});
-btnRotate.addEventListener('click', () => {
-  autoRotate = !autoRotate;
-  btnRotate.classList.toggle('active', autoRotate);
-});
-
-window.addEventListener('resize', () => {
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
-});
-
-/* --- Animate ------------------------------------------------------------ */
-function tick() {
-  requestAnimationFrame(tick);
-  if (autoRotate && !dragging) targetY += 0.0035;
-  rotX += (targetX - rotX) * 0.1;
-  rotY += (targetY - rotY) * 0.1;
-  group.rotation.x = rotX;
-  group.rotation.y = rotY;
-  renderer.render(scene, camera);
-}
-tick();
+  loop();
+})();
 </script>
-</body>
-</html>
