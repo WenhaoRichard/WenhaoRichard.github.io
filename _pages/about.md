@@ -36,11 +36,11 @@ redirect_from:
 
   .entry-stage.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
 
-  .stage-wrap { width: min(92vw, 900px); text-align: center; }
+  .stage-wrap { width: min(99vw, 1400px); text-align: center; }
 
   #oloid-canvas {
-    width: min(92vw, 760px);
-    height: min(64vh, 500px);
+    width: min(98vw, 1280px);
+    height: min(82vh, 860px);
     border-radius: 20px;
     border: 1px solid rgba(255,255,255,.12);
     background: #000;
@@ -53,7 +53,7 @@ redirect_from:
 
   .stage-name {
     margin: .95rem 0 .2rem;
-    font-size: clamp(1.2rem, 2.4vw, 1.85rem);
+    font-size: clamp(1.35rem, 2.8vw, 2.2rem);
     letter-spacing: .2em;
     font-weight: 700;
   }
@@ -118,7 +118,7 @@ redirect_from:
 
 <div class="entry-stage" id="entry-stage" aria-label="Draggable Oloid entry stage">
   <div class="stage-wrap">
-    <canvas id="oloid-canvas" width="960" height="620"></canvas>
+    <canvas id="oloid-canvas" width="1600" height="980"></canvas>
     <h1 class="stage-name">RichardWWHH</h1>
     <p class="stage-sub">Oloid geometry · drag to rotate view</p>
     <button class="enter-btn" id="enter-home">进入个人主页</button>
@@ -201,7 +201,7 @@ redirect_from:
 
   function proj(p) {
     const [x, y, z] = p;
-    const k = 230 / (z + 5.7);
+    const k = 290 / (z + 5.7);
     return [canvas.width / 2 + x * k * 130, canvas.height / 2 + y * k * 130];
   }
 
