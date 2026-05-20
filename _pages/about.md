@@ -9,110 +9,95 @@ redirect_from:
 ---
 
 <style>
-  .intro-overlay {
+  :root {
+    --bg: #030303;
+    --panel: rgba(14, 14, 18, 0.82);
+    --line: rgba(255, 255, 255, 0.14);
+    --text: #f3f4f8;
+    --subtle: #b6bdd1;
+    --accent: #7c9cff;
+  }
+
+  .entry-stage {
     position: fixed;
     inset: 0;
     z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: radial-gradient(circle at center, #080d1f 0%, #02030a 70%);
-    perspective: 900px;
-    animation: introFadeOut 0.9s ease 3.8s forwards;
+    background: radial-gradient(circle at 50% 30%, #111 0%, #000 70%);
+    color: var(--text);
+    display: grid;
+    place-items: center;
+    transition: opacity 0.65s ease, visibility 0.65s ease;
   }
 
-  .galaxy {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    transform-style: preserve-3d;
-    animation: galaxySpin 5s linear infinite;
+  .entry-stage.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
   }
 
-  .galaxy::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    background: #fff8c7;
-    box-shadow: 0 0 25px #fff4a8;
-  }
-
-  .star {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    transform-style: preserve-3d;
-    background: #8fd3ff;
-    box-shadow: 0 0 7px rgba(143, 211, 255, 0.9);
-    animation: twinkle 1.6s ease-in-out infinite;
-  }
-
-  .intro-text {
-    position: absolute;
-    bottom: 11vh;
+  .stage-wrap {
     text-align: center;
-    color: #e2ebff;
-    letter-spacing: 0.8px;
-    font-size: 0.95rem;
+    width: min(92vw, 860px);
+  }
+
+  #oloid-canvas {
+    width: min(92vw, 720px);
+    height: min(62vh, 480px);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: #000;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45), inset 0 0 40px rgba(124, 156, 255, 0.08);
+    cursor: grab;
+    touch-action: none;
+  }
+
+  #oloid-canvas.dragging { cursor: grabbing; }
+
+  .stage-name {
+    margin: 1rem 0 0.3rem;
+    font-size: clamp(1.1rem, 2.2vw, 1.6rem);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .stage-sub {
+    margin: 0 0 1rem;
+    color: var(--subtle);
+  }
+
+  .enter-btn {
+    border: 1px solid rgba(124, 156, 255, 0.6);
+    color: #fff;
+    background: linear-gradient(130deg, #4e6fff 0%, #7b4dff 100%);
+    padding: 0.7rem 1.4rem;
+    border-radius: 999px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    cursor: pointer;
   }
 
   .page-shell {
     opacity: 0;
-    transform: translateY(20px) scale(0.98);
-    animation: contentIn 0.9s ease 3.95s forwards;
+    transform: translateY(20px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+  }
+
+  .page-shell.ready {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .hero-panel {
-    position: relative;
-    overflow: hidden;
-    border-radius: 20px;
-    padding: 2rem;
-    margin-bottom: 1.6rem;
-    background: radial-gradient(circle at 20% 20%, #4facfe 0%, #00f2fe 35%, #4b3df8 100%);
+    margin-bottom: 1.4rem;
+    padding: 1.7rem;
+    border-radius: 18px;
     color: #fff;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.22);
+    background: linear-gradient(145deg, #121a33 0%, #283f92 50%, #3b2e80 100%);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.22);
   }
 
-  .hero-title {
-    font-size: 2rem;
-    margin: 0 0 0.5rem;
-  }
-
-  .hero-subtitle {
-    margin: 0;
-    font-size: 1rem;
-    line-height: 1.8;
-    max-width: 800px;
-  }
-
-  .card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1rem;
-    margin: 1.2rem 0 2rem;
-  }
-
-  .cool-card {
-    border-radius: 16px;
-    padding: 1rem 1.1rem;
-    background: linear-gradient(145deg, #1f2635, #2f3a52);
-    color: #e6ecff;
-    box-shadow: 0 8px 20px rgba(33, 45, 78, 0.25);
-    transition: transform 0.22s ease, box-shadow 0.22s ease;
-  }
-
-  .cool-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 14px 28px rgba(33, 45, 78, 0.38);
-  }
+  .hero-title { margin: 0 0 0.4rem; }
+  .hero-subtitle { margin: 0; line-height: 1.8; }
 
   .core-zone {
     border: 1px solid #e7edf8;
@@ -131,87 +116,25 @@ redirect_from:
     padding: 0.4rem;
   }
 
-  .message-board {
-    margin-top: 1rem;
-    border-radius: 14px;
-    border: 1px solid #e7e7e7;
-    padding: 1rem;
-    background: #fff;
-  }
-
-  .message-board form {
-    display: grid;
-    gap: 0.6rem;
-    margin-bottom: 1rem;
-  }
-
-  .message-board input,
-  .message-board textarea,
-  .message-board button {
-    border-radius: 10px;
-    border: 1px solid #d0d7e8;
-    padding: 0.68rem 0.75rem;
-    font-size: 0.95rem;
-  }
-
-  .message-board button {
-    border: none;
-    background: #3b82f6;
-    color: #fff;
-    font-weight: 700;
-    cursor: pointer;
-  }
-
-  .msg-item {
-    border: 1px solid #ebedf5;
-    border-radius: 10px;
-    padding: 0.7rem;
-    margin-bottom: 0.6rem;
-    background: #fafcff;
-  }
-
-  .msg-meta,
-  .message-hint {
-    color: #6b7280;
-    font-size: 0.82rem;
-  }
-
   .footer-stats {
-    margin-top: 2.2rem;
+    margin-top: 2rem;
     text-align: right;
-    opacity: 0.6;
+    opacity: 0.56;
     font-size: 0.78rem;
     color: #6b7280;
   }
-
-  .footer-stats span + span {
-    margin-left: 0.8rem;
-  }
-
-  @keyframes galaxySpin {
-    from { transform: rotateX(64deg) rotateZ(0deg); }
-    to { transform: rotateX(64deg) rotateZ(360deg); }
-  }
-
-  @keyframes twinkle {
-    50% { opacity: 0.35; transform: scale(0.65); }
-  }
-
-  @keyframes introFadeOut {
-    to { opacity: 0; visibility: hidden; }
-  }
-
-  @keyframes contentIn {
-    to { opacity: 1; transform: translateY(0) scale(1); }
-  }
 </style>
 
-<div class="intro-overlay" id="intro-overlay">
-  <div class="galaxy" id="galaxy"></div>
-  <p class="intro-text">Entering Hao Wen Universe · AI for ISP + Deep Learning</p>
+<div class="entry-stage" id="entry-stage" aria-label="Oloid entry animation">
+  <div class="stage-wrap">
+    <canvas id="oloid-canvas" width="900" height="600"></canvas>
+    <h1 class="stage-name">RichardWWHH</h1>
+    <p class="stage-sub">Drag to rotate view · Oloid Geometry Portal</p>
+    <button class="enter-btn" id="enter-home">Enter Homepage</button>
+  </div>
 </div>
 
-<div class="page-shell">
+<div class="page-shell" id="page-shell">
   <section class="hero-panel">
     <h1 class="hero-title">👋 你好，我是文豪（Hao Wen）</h1>
     <p class="hero-subtitle">
@@ -220,21 +143,6 @@ redirect_from:
       Building fascinating, reliable intelligence for real-world systems — <em>from pixels to platforms</em>.
     </p>
   </section>
-
-  <div class="card-grid">
-    <article class="cool-card">
-      <h3>🚀 Focus Now</h3>
-      <p>面向真实业务场景，持续推进 AI 在系统可靠性、可观测性与自动化中的落地。</p>
-    </article>
-    <article class="cool-card">
-      <h3>🧠 Research Interests</h3>
-      <p>Vision-Language Models、模型鲁棒性与安全、AI for Systems、AIGC + IoT。</p>
-    </article>
-    <article class="cool-card">
-      <h3>🎯 Style</h3>
-      <p>Data-driven + engineering-first。重视 latency、cost、stability，也重视“wow effect”。</p>
-    </article>
-  </div>
 
   <section class="core-zone">
     <h2>🔬 Featured Project</h2>
@@ -256,17 +164,6 @@ redirect_from:
     </ul>
   </section>
 
-  <section class="message-board">
-    <h2>📝 留言板</h2>
-    <form id="guestbook-form">
-      <input id="guest-name" type="text" maxlength="30" placeholder="你的昵称（必填）" required>
-      <textarea id="guest-message" rows="4" maxlength="280" placeholder="留下点什么吧（最多 280 字）" required></textarea>
-      <button type="submit">发布留言</button>
-    </form>
-    <div id="guestbook-list"></div>
-    <div class="message-hint">当前为轻量本地留言板（浏览器本地存储）。</div>
-  </section>
-
   <div class="footer-stats">
     <span>PV: <strong id="busuanzi_value_site_pv">...</strong></span>
     <span>UV: <strong id="busuanzi_value_site_uv">...</strong></span>
@@ -276,92 +173,121 @@ redirect_from:
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <script>
   (function() {
-    const galaxy = document.getElementById("galaxy");
-    for (let i = 0; i < 120; i += 1) {
-      const star = document.createElement("span");
-      star.className = "star";
-      const angle = i * 0.35;
-      const radius = 8 + i * 1.05;
-      const x = Math.cos(angle) * radius;
-      const y = Math.sin(angle) * radius;
-      const z = (i % 9) * 6 - 24;
-      const size = 2 + (i % 3);
-      star.style.width = `${size}px`;
-      star.style.height = `${size}px`;
-      star.style.transform = `translate3d(${x}px, ${y}px, ${z}px)`;
-      star.style.animationDelay = `${(i % 17) * 0.09}s`;
-      galaxy.appendChild(star);
-    }
+    const canvas = document.getElementById("oloid-canvas");
+    const ctx = canvas.getContext("2d");
+    const stage = document.getElementById("entry-stage");
+    const enterBtn = document.getElementById("enter-home");
+    const shell = document.getElementById("page-shell");
 
-    const storageKey = "hao_wen_guestbook_v1";
-    const listEl = document.getElementById("guestbook-list");
-    const formEl = document.getElementById("guestbook-form");
-    const nameEl = document.getElementById("guest-name");
-    const msgEl = document.getElementById("guest-message");
+    const state = { rotX: -0.5, rotY: 0.8, dragging: false, lastX: 0, lastY: 0, autoSpin: 0.004 };
 
-    function escapeHtml(str) {
-      return str
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/\"/g, "&quot;")
-        .replace(/'/g, "&#039;");
-    }
-
-    function loadMessages() {
-      try {
-        return JSON.parse(localStorage.getItem(storageKey) || "[]");
-      } catch (e) {
-        return [];
+    function makeCirclePoints(offsetX, rotZ, count) {
+      const pts = [];
+      for (let i = 0; i < count; i += 1) {
+        const t = (Math.PI * 2 * i) / count;
+        const x = Math.cos(t);
+        const y = Math.sin(t);
+        const z = 0;
+        const xr = x * Math.cos(rotZ) - y * Math.sin(rotZ) + offsetX;
+        const yr = x * Math.sin(rotZ) + y * Math.cos(rotZ);
+        pts.push([xr, yr, z]);
       }
+      return pts;
     }
 
-    function saveMessages(messages) {
-      localStorage.setItem(storageKey, JSON.stringify(messages));
+    const ringA = makeCirclePoints(0.5, 0, 160);
+    const ringB = makeCirclePoints(-0.5, Math.PI / 2, 160);
+
+    function rotate3D(p, ax, ay) {
+      const [x0, y0, z0] = p;
+      const cx = Math.cos(ax), sx = Math.sin(ax);
+      const cy = Math.cos(ay), sy = Math.sin(ay);
+      const y1 = y0 * cx - z0 * sx;
+      const z1 = y0 * sx + z0 * cx;
+      const x2 = x0 * cy + z1 * sy;
+      const z2 = -x0 * sy + z1 * cy;
+      return [x2, y1, z2];
     }
 
-    function renderMessages() {
-      const messages = loadMessages();
-      if (!messages.length) {
-        listEl.innerHTML = "<p class='message-hint'>还没有留言，来抢个沙发吧 🎉</p>";
-        return;
+    function project(p) {
+      const [x, y, z] = p;
+      const scale = 210 / (z + 5.5);
+      return [canvas.width / 2 + x * scale, canvas.height / 2 + y * scale, scale];
+    }
+
+    function drawRing(points, color) {
+      ctx.beginPath();
+      points.forEach((pt, idx) => {
+        const r = rotate3D(pt, state.rotX, state.rotY);
+        const [sx, sy] = project(r);
+        if (idx === 0) ctx.moveTo(sx, sy);
+        else ctx.lineTo(sx, sy);
+      });
+      ctx.closePath();
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 2;
+      ctx.shadowColor = color;
+      ctx.shadowBlur = 12;
+      ctx.stroke();
+      ctx.shadowBlur = 0;
+    }
+
+    function frame() {
+      if (!state.dragging) state.rotY += state.autoSpin;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      drawRing(ringA, "#7ea8ff");
+      drawRing(ringB, "#a78bfa");
+
+      ctx.fillStyle = "rgba(255,255,255,0.88)";
+      for (let i = 0; i < 80; i += 1) {
+        const x = (i * 97) % canvas.width;
+        const y = (i * 53) % canvas.height;
+        ctx.fillRect(x, y, 1.3, 1.3);
       }
-
-      listEl.innerHTML = messages
-        .slice()
-        .reverse()
-        .map(({ name, message, date }) => {
-          return `
-            <article class="msg-item">
-              <strong>${escapeHtml(name)}</strong>
-              <p>${escapeHtml(message)}</p>
-              <div class="msg-meta">${new Date(date).toLocaleString()}</div>
-            </article>
-          `;
-        })
-        .join("");
+      requestAnimationFrame(frame);
     }
 
-    formEl.addEventListener("submit", function(event) {
-      event.preventDefault();
-      const name = nameEl.value.trim();
-      const message = msgEl.value.trim();
-      if (!name || !message) return;
+    function startDrag(clientX, clientY) {
+      state.dragging = true;
+      state.lastX = clientX;
+      state.lastY = clientY;
+      canvas.classList.add("dragging");
+    }
 
-      const messages = loadMessages();
-      messages.push({ name, message, date: new Date().toISOString() });
-      saveMessages(messages.slice(-50));
-      formEl.reset();
-      renderMessages();
+    function moveDrag(clientX, clientY) {
+      if (!state.dragging) return;
+      const dx = clientX - state.lastX;
+      const dy = clientY - state.lastY;
+      state.lastX = clientX;
+      state.lastY = clientY;
+      state.rotY += dx * 0.007;
+      state.rotX += dy * 0.007;
+    }
+
+    function endDrag() {
+      state.dragging = false;
+      canvas.classList.remove("dragging");
+    }
+
+    canvas.addEventListener("mousedown", (e) => startDrag(e.clientX, e.clientY));
+    window.addEventListener("mousemove", (e) => moveDrag(e.clientX, e.clientY));
+    window.addEventListener("mouseup", endDrag);
+
+    canvas.addEventListener("touchstart", (e) => {
+      const t = e.touches[0];
+      startDrag(t.clientX, t.clientY);
+    }, { passive: true });
+    window.addEventListener("touchmove", (e) => {
+      const t = e.touches[0];
+      if (t) moveDrag(t.clientX, t.clientY);
+    }, { passive: true });
+    window.addEventListener("touchend", endDrag, { passive: true });
+
+    enterBtn.addEventListener("click", () => {
+      stage.classList.add("hidden");
+      shell.classList.add("ready");
     });
 
-    renderMessages();
-
-    setTimeout(function() {
-      const overlay = document.getElementById("intro-overlay");
-      if (overlay) {
-        overlay.style.pointerEvents = "none";
-      }
-    }, 4000);
+    frame();
   })();
 </script>
