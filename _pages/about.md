@@ -147,6 +147,125 @@ redirect_from:
   </section>
 </div>
 
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script>
+(function () {
+  const canvas = document.getElementById('oloid-canvas');
+  const ctx = canvas.getContext('2d');
+  const stage = document.getElementById('entry-stage');
+  const shell = document.getElementById('page-shell');
+  const btn = document.getElementById('enter-home');
+
+  const state = { ax: -0.5, ay: 0.84, dragging: false, lx: 0, ly: 0, spin: 0.0035 };
+
+  function circle(radius, center, normal, count) {
+    const pts = [];
+    const [cx, cy, cz] = center;
+    let u = [1, 0, 0], v = [0, 1, 0];
+    if (normal[0] === 1) { u = [0,1,0]; v = [0,0,1]; }
+    if (normal[1] === 1) { u = [1,0,0]; v = [0,0,1]; }
+    if (normal[2] === 1) { u = [1,0,0]; v = [0,1,0]; }
+    for (let i = 0; i < count; i += 1) {
+      const t = (i / count) * Math.PI * 2;
+      pts.push([
+        cx + radius * (Math.cos(t) * u[0] + Math.sin(t) * v[0]),
+        cy + radius * (Math.cos(t) * u[1] + Math.sin(t) * v[1]),
+        cz + radius * (Math.cos(t) * u[2] + Math.sin(t) * v[2])
+      ]);
+    }
+    return pts;
+  }
+
+  const r = 1;
+  const c1 = circle(r, [0.5, 0, 0], [0, 0, 1], 220);
+  const c2 = circle(r, [-0.5, 0, 0], [1, 0, 0], 220);
+
+  function rot(p) {
+    const [x0, y0, z0] = p;
+    const cx = Math.cos(state.ax), sx = Math.sin(state.ax);
+    const cy = Math.cos(state.ay), sy = Math.sin(state.ay);
+    const y1 = y0 * cx - z0 * sx;
+    const z1 = y0 * sx + z0 * cx;
+    const x2 = x0 * cy + z1 * sy;
+    const z2 = -x0 * sy + z1 * cy;
+    return [x2, y1, z2];
+  }
+
+  function proj(p) {
+    const [x, y, z] = p;
+    const k = 290 / (z + 5.7);
+    return [canvas.width / 2 + x * k * 130, canvas.height / 2 + y * k * 130];
+  }
+
+  function drawCurve(points, color, width, glow) {
+    ctx.beginPath();
+    points.forEach((p, i) => {
+      const q = proj(rot(p));
+      if (i === 0) ctx.moveTo(q[0], q[1]); else ctx.lineTo(q[0], q[1]);
+    });
+    ctx.closePath();
+    ctx.strokeStyle = color;
+    ctx.lineWidth = width;
+    ctx.shadowColor = color;
+    ctx.shadowBlur = glow;
+    ctx.stroke();
+    ctx.shadowBlur = 0;
+  }
+
+  function drawGenerators() {
+    ctx.strokeStyle = 'rgba(99,255,165,.5)';
+    ctx.lineWidth = 1.2;
+    for (let i = 0; i < 36; i += 1) {
+      const t = (i / 36) * Math.PI * 2;
+      const p1 = [0.5 + Math.cos(t), Math.sin(t), 0];
+      const p2 = [-0.5, Math.cos(t), Math.sin(t)];
+      const a = proj(rot(p1));
+      const b = proj(rot(p2));
+      ctx.beginPath();
+      ctx.moveTo(a[0], a[1]);
+      ctx.lineTo(b[0], b[1]);
+      ctx.stroke();
+    }
+  }
+
+  function stars() {
+    ctx.fillStyle = 'rgba(255,255,255,.68)';
+    for (let i = 0; i < 95; i += 1) {
+      const x = (i * 97 + 17) % canvas.width;
+      const y = (i * 53 + 19) % canvas.height;
+      ctx.fillRect(x, y, 1.3, 1.3);
+    }
+  }
+
+  function loop() {
+    if (!state.dragging) state.ay += state.spin;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    stars();
+    drawGenerators();
+    drawCurve(c1, '#62d0ff', 2.2, 14);
+    drawCurve(c2, '#b985ff', 2.2, 14);
+    requestAnimationFrame(loop);
+  }
+
+  function start(x, y) { state.dragging = true; state.lx = x; state.ly = y; canvas.classList.add('dragging'); }
+  function move(x, y) {
+    if (!state.dragging) return;
+    const dx = x - state.lx;
+    const dy = y - state.ly;
+    state.lx = x; state.ly = y;
+    state.ay += dx * 0.007;
+    state.ax += dy * 0.007;
+  }
+  function end() { state.dragging = false; canvas.classList.remove('dragging'); }
+
+  canvas.addEventListener('mousedown', (e) => start(e.clientX, e.clientY));
+  window.addEventListener('mousemove', (e) => move(e.clientX, e.clientY));
+  window.addEventListener('mouseup', end);
+  canvas.addEventListener('touchstart', (e) => { const t = e.touches[0]; start(t.clientX, t.clientY); }, { passive: true });
+  window.addEventListener('touchmove', (e) => { const t = e.touches[0]; if (t) move(t.clientX, t.clientY); }, { passive: true });
+  window.addEventListener('touchend', end, { passive: true });
+
+  btn.addEventListener('click', function () { stage.classList.add('hidden'); shell.classList.add('ready'); });
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <script>
