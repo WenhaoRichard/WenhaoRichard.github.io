@@ -3,173 +3,291 @@ permalink: /
 title: "About me"
 excerpt: ""
 author_profile: true
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---
 
-<div style="height: 200vh;"> <!-- 创建一个父容器来提供滚动空间 -->
-  <div class="scroll-scale-container">
-    <div class="scroll-scale-content">
+<style>
+  :root {
+    --bg: #030303;
+    --panel: rgba(14, 14, 18, 0.82);
+    --line: rgba(255, 255, 255, 0.14);
+    --text: #f3f4f8;
+    --subtle: #b6bdd1;
+    --accent: #7c9cff;
+  }
 
-      <!-- 在这里放置您想缩放的内容 -->
-      <div>
-        **Hao is currently a Machine Learning and Backend Developer at China Merchants Bank Co.,**  
-        He graduated with a B.Eng. in Artificial Technology and Science from South China University of Technology (SCUT). In 2021, he earned his M.Sc. degree in Electrical and Computer Engineering from the University of Florida. He applied Natural Language Processing techniques to analyze health and log data within a mobile app, which boasts over 100 million users.  
-        His research interests are focused on model security and robustness in Computer Vision using Large Vision Models, AI for Systems, and the integration of AI with IoT (Internet of Things)."
-        He is now working as a research assitant under the supervision of Professor Antonio at Purdue University.
-      </div>
+  .entry-stage {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: radial-gradient(circle at 50% 30%, #111 0%, #000 70%);
+    color: var(--text);
+    display: grid;
+    place-items: center;
+    transition: opacity 0.65s ease, visibility 0.65s ease;
+  }
 
-    </div>
+  .entry-stage.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .stage-wrap {
+    text-align: center;
+    width: min(92vw, 860px);
+  }
+
+  #oloid-canvas {
+    width: min(92vw, 720px);
+    height: min(62vh, 480px);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: #000;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45), inset 0 0 40px rgba(124, 156, 255, 0.08);
+    cursor: grab;
+    touch-action: none;
+  }
+
+  #oloid-canvas.dragging { cursor: grabbing; }
+
+  .stage-name {
+    margin: 1rem 0 0.3rem;
+    font-size: clamp(1.1rem, 2.2vw, 1.6rem);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .stage-sub {
+    margin: 0 0 1rem;
+    color: var(--subtle);
+  }
+
+  .enter-btn {
+    border: 1px solid rgba(124, 156, 255, 0.6);
+    color: #fff;
+    background: linear-gradient(130deg, #4e6fff 0%, #7b4dff 100%);
+    padding: 0.7rem 1.4rem;
+    border-radius: 999px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+  }
+
+  .page-shell {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+  }
+
+  .page-shell.ready {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .hero-panel {
+    margin-bottom: 1.4rem;
+    padding: 1.7rem;
+    border-radius: 18px;
+    color: #fff;
+    background: linear-gradient(145deg, #121a33 0%, #283f92 50%, #3b2e80 100%);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.22);
+  }
+
+  .hero-title { margin: 0 0 0.4rem; }
+  .hero-subtitle { margin: 0; line-height: 1.8; }
+
+  .core-zone {
+    border: 1px solid #e7edf8;
+    background: #fcfdff;
+    border-radius: 16px;
+    padding: 1.1rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .project-banner {
+    width: 100%;
+    max-height: 280px;
+    object-fit: contain;
+    border-radius: 14px;
+    background: #f4f6fb;
+    padding: 0.4rem;
+  }
+
+  .footer-stats {
+    margin-top: 2rem;
+    text-align: right;
+    opacity: 0.56;
+    font-size: 0.78rem;
+    color: #6b7280;
+  }
+</style>
+
+<div class="entry-stage" id="entry-stage" aria-label="Oloid entry animation">
+  <div class="stage-wrap">
+    <canvas id="oloid-canvas" width="900" height="600"></canvas>
+    <h1 class="stage-name">RichardWWHH</h1>
+    <p class="stage-sub">Drag to rotate view · Oloid Geometry Portal</p>
+    <button class="enter-btn" id="enter-home">Enter Homepage</button>
   </div>
 </div>
 
-<div style="padding: 2rem;">
-  <dl style="font-family: Arial, sans-serif; font-size: 14px;color: #333; text-align: left; border: 2px solid #3f51b5; padding: 10px; border-radius: 10px;">
-    <dt>My Documents</dt>
-    <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
-      <a href="./files/CV_research.pdf" style="color: black; text-decoration: none;">CV</a>
-    </dd>
-    <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
-      <a href="./files/transcript_graduate.pdf" style="color: black; text-decoration: none;">Transcript (Graduate)</a>
-      <a href="./files/Diploma.pdf" style="color: black; text-decoration: none;">Certificate (Graduate)</a>
-    </dd>
-    <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
-      <a href="./files/Transcript_Undergraduate.pdf" style="color: black; text-decoration: none;">Transcript(Undergraduate)</a>
-      <a href="./files/undergraduateTranscript.pdf" style="color: black; text-decoration: none;">Certificate (Undergraduate)</a>
-    </dd>
-    <!-- <dt>Tools</dt>
-    <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
-      <a href="../time_diff.html" style="color: black; text-decoration: none;">Time Difference Between China and US</a>
-    </dd>
-    <dd class="link" style="background-color: #f2f2f2; border-radius: 10px; margin-bottom: 10px; padding: 10px;">
-      <a href="../test.html" style="color: black; text-decoration: none;">My Calendar</a>
-    </dd> -->
+<div class="page-shell" id="page-shell">
+  <section class="hero-panel">
+    <h1 class="hero-title">👋 你好，我是文豪（Hao Wen）</h1>
+    <p class="hero-subtitle">
+      <strong>AI for ISP + Deep Learning.</strong><br>
+      我专注于把 AI 算法真正推到 production：从 research prototype 到 robust deployment。<br>
+      Building fascinating, reliable intelligence for real-world systems — <em>from pixels to platforms</em>.
+    </p>
+  </section>
 
-  </dl>
+  <section class="core-zone">
+    <h2>🔬 Featured Project</h2>
+    <img src="../images/design.png" alt="Vision-Language Model design" class="project-banner">
+    <ul>
+      <li><strong>Efficient In-context Visual Learning</strong>：在图像去噪、去雨等任务兼顾速度与精度。</li>
+      <li><strong>Model Compression</strong>：通过剪枝与量化减少开销并尽可能保持性能。</li>
+    </ul>
+  </section>
 
-  <script>
-    const links = document.querySelectorAll(".link");
+  <section class="core-zone">
+    <h2>📎 Documents</h2>
+    <ul>
+      <li><a href="./files/CV_research.pdf">CV</a></li>
+      <li><a href="./files/transcript_graduate.pdf">Transcript (Graduate)</a></li>
+      <li><a href="./files/Diploma.pdf">Certificate (Graduate)</a></li>
+      <li><a href="./files/Transcript_Undergraduate.pdf">Transcript (Undergraduate)</a></li>
+      <li><a href="./files/undergraduateTranscript.pdf">Certificate (Undergraduate)</a></li>
+    </ul>
+  </section>
 
-    links.forEach(link => {
-      link.addEventListener("mouseenter", function() {
-        this.style.color = "red";
-        this.style.fontSize = "20px";
-        this.style.transform = "scale(1.01)";
+  <div class="footer-stats">
+    <span>PV: <strong id="busuanzi_value_site_pv">...</strong></span>
+    <span>UV: <strong id="busuanzi_value_site_uv">...</strong></span>
+  </div>
+</div>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script>
+  (function() {
+    const canvas = document.getElementById("oloid-canvas");
+    const ctx = canvas.getContext("2d");
+    const stage = document.getElementById("entry-stage");
+    const enterBtn = document.getElementById("enter-home");
+    const shell = document.getElementById("page-shell");
+
+    const state = { rotX: -0.5, rotY: 0.8, dragging: false, lastX: 0, lastY: 0, autoSpin: 0.004 };
+
+    function makeCirclePoints(offsetX, rotZ, count) {
+      const pts = [];
+      for (let i = 0; i < count; i += 1) {
+        const t = (Math.PI * 2 * i) / count;
+        const x = Math.cos(t);
+        const y = Math.sin(t);
+        const z = 0;
+        const xr = x * Math.cos(rotZ) - y * Math.sin(rotZ) + offsetX;
+        const yr = x * Math.sin(rotZ) + y * Math.cos(rotZ);
+        pts.push([xr, yr, z]);
+      }
+      return pts;
+    }
+
+    const ringA = makeCirclePoints(0.5, 0, 160);
+    const ringB = makeCirclePoints(-0.5, Math.PI / 2, 160);
+
+    function rotate3D(p, ax, ay) {
+      const [x0, y0, z0] = p;
+      const cx = Math.cos(ax), sx = Math.sin(ax);
+      const cy = Math.cos(ay), sy = Math.sin(ay);
+      const y1 = y0 * cx - z0 * sx;
+      const z1 = y0 * sx + z0 * cx;
+      const x2 = x0 * cy + z1 * sy;
+      const z2 = -x0 * sy + z1 * cy;
+      return [x2, y1, z2];
+    }
+
+    function project(p) {
+      const [x, y, z] = p;
+      const scale = 210 / (z + 5.5);
+      return [canvas.width / 2 + x * scale, canvas.height / 2 + y * scale, scale];
+    }
+
+    function drawRing(points, color) {
+      ctx.beginPath();
+      points.forEach((pt, idx) => {
+        const r = rotate3D(pt, state.rotX, state.rotY);
+        const [sx, sy] = project(r);
+        if (idx === 0) ctx.moveTo(sx, sy);
+        else ctx.lineTo(sx, sy);
       });
-      link.addEventListener("mouseleave", function() {
-        this.style.color = "blue";
-        this.style.fontSize = "14px";
-        this.style.transform = "scale(1)";
-      });
+      ctx.closePath();
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 2;
+      ctx.shadowColor = color;
+      ctx.shadowBlur = 12;
+      ctx.stroke();
+      ctx.shadowBlur = 0;
+    }
+
+    function frame() {
+      if (!state.dragging) state.rotY += state.autoSpin;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      drawRing(ringA, "#7ea8ff");
+      drawRing(ringB, "#a78bfa");
+
+      ctx.fillStyle = "rgba(255,255,255,0.88)";
+      for (let i = 0; i < 80; i += 1) {
+        const x = (i * 97) % canvas.width;
+        const y = (i * 53) % canvas.height;
+        ctx.fillRect(x, y, 1.3, 1.3);
+      }
+      requestAnimationFrame(frame);
+    }
+
+    function startDrag(clientX, clientY) {
+      state.dragging = true;
+      state.lastX = clientX;
+      state.lastY = clientY;
+      canvas.classList.add("dragging");
+    }
+
+    function moveDrag(clientX, clientY) {
+      if (!state.dragging) return;
+      const dx = clientX - state.lastX;
+      const dy = clientY - state.lastY;
+      state.lastX = clientX;
+      state.lastY = clientY;
+      state.rotY += dx * 0.007;
+      state.rotX += dy * 0.007;
+    }
+
+    function endDrag() {
+      state.dragging = false;
+      canvas.classList.remove("dragging");
+    }
+
+    canvas.addEventListener("mousedown", (e) => startDrag(e.clientX, e.clientY));
+    window.addEventListener("mousemove", (e) => moveDrag(e.clientX, e.clientY));
+    window.addEventListener("mouseup", endDrag);
+
+    canvas.addEventListener("touchstart", (e) => {
+      const t = e.touches[0];
+      startDrag(t.clientX, t.clientY);
+    }, { passive: true });
+    window.addEventListener("touchmove", (e) => {
+      const t = e.touches[0];
+      if (t) moveDrag(t.clientX, t.clientY);
+    }, { passive: true });
+    window.addEventListener("touchend", endDrag, { passive: true });
+
+    enterBtn.addEventListener("click", () => {
+      stage.classList.add("hidden");
+      shell.classList.add("ready");
     });
-  </script>
 
-  News
-  ======
-  <ul>
-    <li>[2024/10] As a Machine Learning & Backend Developer, he is actively seeking opportunites as a PhD in AI and its Intersection Domain</li>
-    <li>[2023/06 - Now] I am doing a research on devise a better multi-vision tasks generalist based on ViTs</li>
-    <li>...</li>
-  </ul>
-
-  Research Projects
-  ======
-  <style>
-      .zoomable {
-        transition: transform 0.2s; /* 动画效果 */
-        object-fit: cover; /* 保持图片比例 */
-        width: 200px;
-        height: 150px;
-        margin: 10px;
-      }
-
-      .zoomable:hover {
-        transform: scale(1.1); /* 放大到原始尺寸的 110% */
-      }
-  </style>
-    
-  Vision-Language Model research
-  ------
-
-    <!-- <div style="text-align: center;">
-    <img src="../images/model_arch.png" alt="multiTasker" style="width:250px; height:150px; object-fit:cover; margin:10px;" class="zoomable">
-  </div> -->
-  <div style="text-align: center;">
-    <img src="../images/design.png" alt="multiTasker" style="width:auto; height:auto; max-width:100%; max-height:300px; object-fit:contain; margin:10px;" class="zoomable">
-  </div>
-  <dl>
-    <dt style="text-align: left; padding-left: 15px;">Efficient In-context Visual Learning</dt>
-    <dd style="text-align: left; padding-left: 10px;">Inspired by the MAE-VQGAN, we have an efficient architectural design: Efficient Painter to finetune a pre-trained Efficient backbone for visual in-context learning. This approach has significantly enhanced our efficient multi-tasking vision generalist model. Our model strikes a balance between speed and accuracy. The improved model now excels SOTA in various low-level tasks, including image denoising, rain removal (deraining) while maintains a relatively high throughput during inference.</dd>
-    <dd style="text-align: left; padding-left: 10px;"><a href="#">[Not Open Sourced]</a></dd>
-  </dl>
-
-  Model Compression
-  ------
-  <!-- <div style="text-align: center;">
-    <img src="../images/prunedResult.png" alt="Image 0" style="width:250px; height:150px; object-fit:cover; margin:10px;" class="zoomable">
-    <img src="../images/testPrune.jpg" alt="Image 1" style="width: 250px; height: 150px; object-fit: cover; margin: 10px;" class="zoomable">
-  </div> -->
-  <div style="display: flex; justify-content: center; align-items: center;">
-    <img src="../images/prunedResult.png" alt="Image 0" style="width:250px; height:150px; object-fit:contain; margin:10px;" class="zoomable">
-    <img src="../images/testPrune.jpg" alt="Image 1" style="width: 250px; height: 150px; object-fit:contain; margin: 10px;" class="zoomable">
-  </div>
-  <dl>
-    <dt style="text-align: left; padding-left: 15px;">Deep Learning Model Compression</dt>
-    <dd style="text-align: left; padding-left: 10px;">In this paper, we experimented with using two methods for model compression: Pruning and Quantization. By utilizing these methods, we got a remarkable improvement in model simplification while retaining a relatively close accuracy.</dd>
-  <dd style="text-align: left; padding-left: 10px;"><a href="https://iopscience.iop.org/article/10.1088/1742-6596/2078/1/012047/meta">[Paper]</a>&nbsp;<a href="https://github.com/WenhaoRichard/ModelCompression">[Code]</a></dd>
-  </dl>
-
-
-  Education
-  ======
-
-  <dl>
-  <dt>
-    <img src="../images/ufl.png" width="100" height="110" alt="ufl" align="left">
-  </dt>
-  <dt>&nbsp;University of Florida</dt>
-    <dd>&nbsp;August 2019 - December 2021</dd>
-    <dd>&nbsp;M.Sc., Electrical and Computer Engineering (Major)</dd>
-  </dl>
-
-  <dl>
-  <dt>
-    <img src="../images/scut.jpeg" width="100" height="110" alt="scut" align="left">
-  </dt>
-  <dt>&nbsp;South China University of Technology</dt>
-    <dd>&nbsp;August 2015 - July 2019</dd>
-    <dd>&nbsp;B.Eng., Intelligent Science and Technology</dd>
-  </dl>
-
-  <br/>
-
-
-  Experience
-  ======
-  <dl>
-    <dt>
-      <img src="../images/cmbchina.jpeg" width="100" height="110" alt="cmbchina" align="left">
-    </dt>
-    <dt style="text-align: left; padding-left: 10px;">&nbsp;  IT Department, China Merchants Bank (CMB) Co. Ltd.</dt>
-    <dd style="text-align: left; padding-left: 10px;">&nbsp;  06/2022 - Now</dd>
-    <dd style="text-align: left; padding-left: 10px;">&nbsp;  Machine Learning & Backend Engineer (Full Time)</dd>
-    <dd style="text-align: left; padding-left: 10px;">&nbsp;  Focus: Application of Large Language Model (LLM) on System Availability and Reliability.</dd>
-  </dl>
-
-
-  <dl>
-  <dt>
-    <img src="../images/ICT.jpg" width="100" height="110" alt="ICT" align="left">
-  </dt>
-  <dt style="text-align: left; padding-left: 10px;">&nbsp;  Institute of Computing, Chinese Academy of Sciences</dt>
-  <dd style="text-align: left; padding-left: 10px;">&nbsp;  12/2020 - 03/2021</dd>
-  <dd style="text-align: left; padding-left: 10px;">&nbsp;  Research Assistant (Part Time)</dd>
-  <dd style="text-align: left; padding-left: 10px;">&nbsp;  Focus: Deep learning model compression.</dd>
-  </dl>
-
-
-  <br/>
-</div>
-
-
+    frame();
+  })();
+</script>
