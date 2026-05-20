@@ -27,6 +27,16 @@ redirect_from:
     <img src="../images/design.png" alt="Vision-Language Model design" class="project-banner">
   </section>
 
+
+
+  <section class="core-zone">
+    <h2>🧩 More About Me</h2>
+    {% include about/news.html %}
+    {% include about/research.html %}
+    {% include about/experience.html %}
+    {% include about/education.html %}
+  </section>
+
   <section class="core-zone">
     <h2>📎 Documents</h2>
     <ul>
